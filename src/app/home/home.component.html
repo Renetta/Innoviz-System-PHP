@@ -1,0 +1,125 @@
+
+
+
+<section class="header img-fluid" style=" background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
+      url('./assets/images/ictbanner5.png');"
+      >
+  <div class="text-box">
+    <h1><a routerLink="/our-company">INNOVIZ <span style="padding-right: 10px;"></span>SYSTEMS</a></h1>
+    <p>
+      “Innovative solutions catering to all aspirations"
+    </p>
+    <a routerLink="/services" class="visit-btn">Our Services</a>
+  </div>
+</section>
+
+<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
+  <div class="overlay" >
+      <div class="spinner-wrapper">
+          <app-spinner message="Data Loading"></app-spinner>
+      </div>
+  </div>
+  
+  <div class="loaded-content" [class.blurred]="showSpinner">
+  </div>
+</section>
+
+<section class="services" *ngIf="!showSpinner">
+  <div class="box-mission ">
+    <h3 class="text-head"><span class="pt-2"><span class="text-sub-head">Our</span> Services</span></h3>
+  </div>
+  <p class="text-break lh-base text-para">
+    We provide all kinds of Information and Communications technology solutions and we are always
+    glad to resolve non-standard and unique tasks. We always take challenges and
+    bring them to a conclusion.
+  </p>
+  <div class="container card-container">
+    <div class="row">
+      <div class="col col-md-4" *ngFor="let service of services; let i = index">
+        <div class="border card text-center card-image">
+          <img [src]=service.img class="card-img-top img-fluid " alt="..." style="height: 12rem;" />
+          <div class="card-body">
+            <h5 class="card-title">{{service.name}}</h5>
+            <p class="card-text">
+              {{service.description}}
+            </p>
+          </div>
+        </div>
+        <div style="padding-bottom: 25px;"></div>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="d-grid gap-2 col-4 mx-auto link">
+        <a class="btn btn-outline-primary" routerLink="/services" role="button">More services <b>> > ></b></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about-content" *ngIf="!showSpinner">
+  <div class="container">
+    <div class="row main-row p-2" style=" background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
+    url('./assets/images/about-image.png');">
+      <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="about-img">
+          <img src="./assets/images/about-home.png" alt="about" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <div class="box-mission ">
+          <h3><span class="pt-2"><span class="text-sub-head"><b>About Company</b></span></span></h3>
+        </div>
+
+        <div class="about-desc mb-2">
+          <p class="text-break lh-base text-para">
+            <span style="font-size: xx-large;"><b>W</b></span>e aim in providing right and specific solutions to
+            clients.
+            We take care of the growing market in the state of Qatar with our knowledge and expertise.
+            <br><br>
+            Innoviz Systems is a total solution
+            provider of system integrator,
+            Parking solutions, security solution, network solution and all the ELV solutions.
+          </p>
+        </div>
+        <div class="about-read-more mb-2">
+          <button class="btn btn-primary read-more-button" type="button" (click)="goToAboutPage()">
+            Read More<span style="padding: 5px;"><i class="bi bi-arrow-right-circle-fill icon-blue"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ----clients--- -->
+<section id="client-content" class="partners mb-5" *ngIf="!showSpinner">
+  <div class="conatiner border border-4 rounded-pill main-prow"
+    style="    background-image: url(./assets/images/clients.jpg);">
+    <div class="box-mission ">
+      <h3 class="text-head"><span class="pt-2"><span class="text-sub-head">Our</span> Clients</span></h3>
+    </div>
+    <div class="container" style="position: sticky;">
+      <owl-carousel-o [options]="partnerOptions">
+        <ng-template carouselSlide *ngFor="let partner of partners; let i=index;">
+          <div class="md-5">
+            <img [src]="partner.partnerLogo" alt="partner" style="width: 150px; top: 0;">
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>
+<!-- <section id="client-content" class="partners">
+
+  <div class="box-mission ">
+    <h3 class="text-head"><span class="pt-2"><span class="text-sub-head">Our</span> Clients</span></h3>
+  </div>
+  <div class="container" style="position: sticky;">
+    <owl-carousel-o [options]="partnerOptions">
+      <ng-template carouselSlide *ngFor="let partner of partners; let i=index;">
+        <div class="md-5">
+          <img [src]="partner.partnerLogo" alt="partner" style="width: 150px; top: 0;">
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</section> -->

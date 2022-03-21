@@ -1,0 +1,325 @@
+<section class="dummy-container" *ngIf="showSpinner">
+</section>
+<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 300px;">
+  <div class="overlay">
+      <div class="spinner-wrapper">
+          <app-spinner message="Data Loading"></app-spinner>
+      </div>
+  </div>
+
+  <div class="loaded-content" [class.blurred]="showSpinner">
+  </div>
+</section>
+<section  #contactContainer class="contact-size" *ngIf="!showSpinner">
+  <div id="contactContentID" ></div>
+</section>
+<!-- <section class=" contact img-fluid" style="
+background-image: linear-gradient(rgb(24 63 105), rgb(24 63 105 / 32%)),
+  url(./assets/images/office1.jpg); width: 100%; max-height: 30%;">
+  <div class="container">
+    <div class="row">
+      <div class="conatiner">
+        <div class="row" style="margin-top: 150px">
+      <div class="col-md-6 align-self-center">
+        <div class="mb-5">
+          <span>
+            <h1 class="contactus-heading"><b>Contact Us</b></h1>
+          </span>
+        </div>
+
+        <div class="mb-5">
+          <p class="contact-info fw-light ">While we are good with smoke signals, there are simpler ways for us to get
+            in touch and answer for your enquiries.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-5 ">
+          <h3 style="color: #fff; text-align: center;">We are here to help <b>You...</b></h3>
+        </div>
+        <form class="g-3 needs-validation" [formGroup]="enquiryForm"  novalidate>
+          <div class="mb-3 form-group">
+            <input type="text" class="form-control" formControlName="fname" id="fname"
+              placeholder="First Name" required>
+            <div *ngIf="f['fname']?.touched && f['fname']?.invalid" class="alert alert-danger">
+              <div *ngIf="f['fname']?.errors && f['fname'].errors?.['required']">First Name is required.</div>
+            </div>
+          </div>
+          <div class="mb-3 form-group">
+            <input type="text" class="form-control" formControlName="lname" id="lname"
+              placeholder="Last Name">
+          </div>
+          <div class="mb-3 form-group">
+            <input type="email" formControlName="email" id="email" class="form-control"
+              placeholder="Your E-mail Address" required>
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+              <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+              <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
+            </div>
+          </div>
+          <div class="mb-3 form-group">
+            <input type="number" formControlName="phone" id="phone" class="form-control"
+              placeholder="Contact Number" required>
+            <div *ngIf="f['phone'].touched && f['phone'].invalid" class="alert alert-danger">
+              <div *ngIf="f['phone'].errors && f['phone'].errors['required']">Contact Number is required.</div>
+            </div>
+          </div>
+          <div class="mb-3 form-group">
+            <input type="text" class="form-control" formControlName="company" id="company"
+              placeholder="Company Name">
+          </div>
+          <div class="mb-3 form-group">
+            <select class="form-select" aria-label="Default select example" formControlName="service"
+               required>
+              <option *ngFor="let service of services" [ngValue]="service.name">
+                {{ service.name }}
+              </option>
+            </select>
+          </div>
+          <div class="mb-3 form-group">
+            <textarea formControlName="message" class="form-control" id="message"
+              cols="30" rows="3" placeholder="Your Message" required></textarea>
+            <div *ngIf="f['message'].touched && f['message'].invalid" class="alert alert-danger">
+              <div *ngIf="f['message'].errors && f['message'].errors['required']">Message is required.</div>
+            </div>
+          </div>
+          <div class="d-grid gap-2 col-12 mx-auto mb-5">
+            <button type="submit" class="btn btn-primary btn-lg" style="background: #e28042;"
+              [disabled]="enquiryForm.invalid || emailSentSuccess" (click)="sendEnquiry()">Send Message
+              <span class="spinner-border text-primary" *ngIf="emailSentSuccess" role="status">
+              </span>
+            </button>
+          </div>
+          <div class="alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert"
+            *ngIf="emailReceived">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+              <use xlink:href="#check-circle-fill" />
+            </svg>
+            <div class="mb-5">
+              {{responseMessage}}
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section> -->
+
+
+  <section class="contact img-fluid" *ngIf="!showSpinner" style="
+background-image: linear-gradient(rgb(24 63 105), rgb(24 63 105 / 32%)),
+  url(./assets/images/office1.jpg); width: 100%; max-height: 30%;">
+    <div id="contactContentID" class="container">
+      <div class="row">
+        <div  class="conatiner">
+          <div class="row" style="margin-top: 150px">
+            <div class="col-md-6 align-self-center">
+              <div class="mb-5">
+                <span>
+                  <h1 class="contactus-heading"><b>Contact Us</b></h1>
+                </span>
+              </div>
+
+              <div class="mb-5">
+                <p class="contact-info fw-light ">While we are good with smoke signals, there are simpler ways for us to
+                  get
+                  in touch and answer for your enquiries.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-5 ">
+                <h3 style="color: #fff; text-align: center;">We are here to help <b>You...</b></h3>
+              </div>
+              <form class="g-3 needs-validation" id="formID" (ngSubmit)="sendEnquiry()" #f="ngForm" novalidate>
+                <div class="mb-3 form-group">
+                  <input type="text" class="form-control" name="fname" [(ngModel)]="enquiry.fname"
+                    placeholder="First Name" required #fname="ngModel" [ngClass]="{
+                    'has-danger': fname.invalid && (fname.dirty || fname.touched),
+                    'has-success': fname.valid && (fname.dirty || fname.touched)
+                  }">
+                  <div class="form-control-feedback" *ngIf="fname.errors && (fname.dirty || fname.touched)">
+                    <p class="text-danger" *ngIf="fname?.errors?.['required']">First name is required</p>
+                  </div>
+                </div>
+                <div class="mb-3 form-group">
+                  <input type="text" class="form-control" name="lname" [(ngModel)]="enquiry.lname"
+                    placeholder="Last Name" required #lname="ngModel">
+                </div>
+
+                <div class="mb-3 form-group">
+                  <input type="email" class="form-control" name="email" [(ngModel)]="enquiry.email"
+                    placeholder="Your E-mail Address" required pattern="[^ @]*@[^ @]*" #email="ngModel" [ngClass]="{
+                    'has-danger': email.invalid && (email.dirty || email.touched),
+                    'has-success': email.valid && (email.dirty || email.touched)
+                  }">
+                  <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+                    <p class="text-danger" *ngIf="email?.errors?.['required']">Email is required</p>
+                    <p class="text-danger" *ngIf="email?.errors?.['pattern']">Please, enter valid email address</p>
+                  </div>
+                </div>
+
+                <div class="mb-3 form-group">
+                  <input type="number" class="form-control" placeholder="Contact Number" name="phone"
+                    [(ngModel)]="enquiry.phone" required #phone="ngModel" [ngClass]="{
+                    'has-danger': phone.invalid && (phone.dirty || phone.touched),
+                    'has-success': phone.valid && (phone.dirty || phone.touched)
+                  }">
+                  <div class="form-control-feedback" *ngIf="phone.errors && (phone.dirty || phone.touched)">
+                    <p class="text-danger" *ngIf="phone?.errors?.['required']">Contact Number is required</p>
+                  </div>
+                </div>
+
+                <div class="mb-3 form-group">
+                  <input type="text" class="form-control" name="company" [(ngModel)]="enquiry.company"
+                    placeholder="Company Name" #company="ngModel">
+                </div>
+                <div class="mb-3 form-group">
+                  <select class="form-select form-control" aria-label="Default select example" name="service"
+                    [(ngModel)]="enquiry.service" required>
+                    <option *ngFor="let service of services" [value]="service.name">
+                      {{ service.name }}
+                    </option>
+                  </select>
+                </div>
+
+                <div class="mb-3 form-group">
+                  <textarea class="form-control" cols="30" rows="3" name="message" [(ngModel)]="enquiry.message"
+                    placeholder="Your Message" required #message="ngModel" [ngClass]="{
+                        'has-danger': message.invalid && (message.dirty || message.touched),
+                        'has-success': message.valid && (message.dirty || message.touched)
+                      }">
+            </textarea>
+                  <div class="form-control-feedback" *ngIf="message.errors && (message.dirty || message.touched)">
+                    <p class="text-danger" *ngIf="message?.errors?.['required']">Please type your message.</p>
+                  </div>
+                </div>
+                <div class="d-grid gap-2 col-12 mx-auto mb-5">
+                  <button type="submit" class="btn btn-primary btn-lg" style="background: #e28042;"
+                    [disabled]="f.invalid || emailSentSuccess" form="formID" (click)="sendEnquiry()">
+                    Send Message
+                    <span class="spinner-border text-primary" *ngIf="emailSentSuccess" role="status">
+                    </span>
+                  </button>
+                </div>
+                <div class="alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert"
+                  *ngIf="emailReceived">
+                  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                    <use xlink:href="#check-circle-fill" />
+                  </svg>
+                  <div class="mb-5">
+                    {{responseMessage}}
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<br><br><br>
+
+<section class="footer-contact img-fluid" *ngIf="!showSpinner">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-6 mb-5 footer-align">
+        <div class="row g-3 mb-1">
+          <div class="col-md-1">
+            <i class="bi bi-geo-alt-fill" style="font-size: 2rem; 
+                        color: #dd4614;"></i>
+          </div>
+          <div class="col-md-4">
+            <p class="contact-label">
+              Visit <span style="color: #dd4614;">us</span> </p>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8" style="margin-top: -35px; margin-bottom: -25px;">
+              <P class="contact-font text-md-start text-wrap label-style lh-lg align-middle">
+                Office no: 03, Building no: 14, <br>
+                Abdul Rahman Bin Jassim Street, <br>
+                AL Wakra, Doha, Qatar
+              </P>
+              <hr style="width: auto;">
+            </div>
+
+          </div>
+        </div>
+        <div class="row g-3 mb-1">
+          <div class="col-md-1">
+            <i class="bi bi-telephone-fill" style="font-size: 2rem; 
+                        color: #dd4614;"></i>
+          </div>
+          <div class="col-md-4">
+            <p class="contact-label">
+              Reach <span style="color: #dd4614;">us</span> </p>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8" style="margin-top: -35px; margin-bottom: -25px;">
+              <P class="contact-font text-md-start text-wrap label-style lh-lg align-middle">
+                <span>Mobile <b>:</b></span>+974 50216760 <br>
+                <span>Landline <b>:</b></span>+974 44357958
+              </P>
+              <hr style="width: auto;">
+            </div>
+
+          </div>
+        </div>
+        <div class="row g-3 mb-1">
+          <div class="col-md-1">
+            <i class="bi bi-send-fill" style="font-size: 2rem; 
+                        color: #dd4614;"></i>
+          </div>
+          <div class="col-md-4">
+            <p class="contact-label">
+              Write to <span style="color: #dd4614;">us</span> </p>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8" style="margin-top: -35px; margin-bottom: -25px;">
+              <P class="contact-font text-md-start text-wrap label-style lh-lg align-middle">
+                <span>Email <b>:</b></span>info@innovizqatar.com
+              </P>
+              <hr style="width: auto;">
+            </div>
+
+          </div>
+        </div>
+        <div class="row g-3 mb-5">
+          <div class="col-md-1">
+            <i class="bi bi-clock-fill" style="font-size: 2rem; 
+                        color: #dd4614;"></i>
+          </div>
+          <div class="col-md-6">
+            <p class="contact-label">
+              Working <span style="color: #dd4614;">Hours</span> </p>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8" style="margin-top: -35px; margin-bottom: -25px;">
+              <P class="contact-font text-md-start text-wrap label-style lh-lg align-middle">
+                <span>Sunday-Thursday</span><br>
+                <span>8:00 am - 5:30 pm</span>
+              </P>
+              <!-- <hr style="width: auto;"> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 footer-align">
+        <div class="row p-3 mb-5 map-box">
+          <div id="map-container-google-11" class="z-depth-1-half map-container" style="height: 400px">
+            <iframe src="https://maps.google.com/maps?q=INNOVIZ+SYSTEMS&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

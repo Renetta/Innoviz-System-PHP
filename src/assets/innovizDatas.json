@@ -1,0 +1,367 @@
+{
+  "Clients": [
+    {
+      "id": 2001,
+      "partnerName": "Ooredoo-Qatar",
+      "partnerLogo": "./assets/images/partners/ooredoo12.png"
+    },
+    {
+      "partnerName": "Commercial Bank of Qatar(CBQ)",
+      "partnerLogo": "./assets/images/partners/cbq1.png"
+    },
+    {
+      "id": 2002,
+      "partnerName": "HMC Qatar",
+      "partnerLogo": "./assets/images/partners/hmc1.png"
+    },
+    {
+      "id": 2003,
+      "partnerName": "Takyeef Electro Mechanical WLL",
+      "partnerLogo": "./assets/images/partners/takyeef1.png"
+    },
+    {
+      "id": 2004,
+      "partnerName": "Asmacs Group-Qatar",
+      "partnerLogo": "./assets/images/partners/asmacs1.png"
+    },
+    {
+      "id": 2005,
+      "partnerName": "Bold Information Technologies-AbuDhabi",
+      "partnerLogo": "./assets/images/partners/bold.png"
+    },
+    {
+      "id": 2006,
+      "partnerName": "Traffic Tech",
+      "partnerLogo": "./assets/images/partners/trafficTech1.png"
+    },
+    {
+      "id": 2006,
+      "partnerName": "Novax Integrated System-Dubai",
+      "partnerLogo": "./assets/images/partners/novax1.png"
+    },
+    {
+      "id": 2006,
+      "partnerName": "Integrated Scientific Technologies Qatar",
+      "partnerLogo": "./assets/images/partners/isq1.png"
+    }
+  ],
+
+  "Services": [
+    {
+      "id": 10002,
+      "name": "Security Solutions",
+      "img": "./assets/images/securitysoln.png",
+      "description": "",
+      "details": [
+        "CCTV systems",
+        "Perimeter Security",
+        "Setting up Control Centers",
+        "Access Control Systems",
+        "Visitors Management System"
+      ]
+    },
+    {
+      "id": 10003,
+      "name": "Networking Solutions",
+      "img": "./assets/images/networking.png",
+      "description": "",
+      "details": [
+        "Structure Cabling",
+        "IP Telephony",
+        "Routing & Switching",
+        "Perimeter & Core Firewalls",
+        "Wireless Networking",
+        "SDWAN"
+      ]
+    },
+    {
+      "id": 10004,
+      "name": "Parking Solutions",
+      "img": "./assets/images/parking.png",
+      "description": "",
+      "details": [
+        "Parking Guidance System",
+        "Parking Revenue System",
+        "Speed Gates",
+        "Turnstile gates",
+        "Hydraulic Bollards",
+        "Road Blockers",
+        "Automatic Barriers",
+        "Ticketing Systems",
+        "Booth Systems",
+        "VIP/Valet Parking"
+      ]
+    },
+    {
+      "id": 10005,
+      "name": "Information Security",
+      "img": "./assets/images/infosec.png",
+      "description": "",
+      "details": [
+        "Identity and Privilege Access",
+        "Management (PAM)",
+        "Integrated Risk Management",
+        "Threat Detection and Response",
+        "Application and Email Security",
+        "Data Loss Prevention (DLP)",
+        "Cloud Security",
+        "Security Operation Center"
+      ]
+    },
+    {
+      "id": 10006,
+      "name": "Fiber Optic Solutions",
+      "img": "./assets/images/fibreOptic.png",
+      "description": "",
+      "details": [
+        "Supply and Installation",
+        "Design Services for Complete Fiber Optic System",
+        "Cable pulling & Splicing Services",
+        "Testing & Reporting Services"
+      ]
+    },
+    {
+      "id": 10001,
+      "name": "Electrical Solutions",
+      "img": "./assets/images/electric-services.png",
+      "description": "",
+      "details": [
+        "Parking Guidance System",
+        "Parking Revenue System",
+        "Speed Gates",
+        "Turnstile gates",
+        "Hydraulic Bollards",
+        "Road Blockers",
+        "Automatic Barriers",
+        "Ticketing Systems",
+        "Booth Systems",
+        "VIP/Valet Parking"
+      ]
+    }
+  ],
+
+  "ServiceComponents": [
+    {
+      "id": 10002,
+      "name": "Security Solutions",
+      "img": "./assets/images/securitysoln.png",
+      "description": "",
+      "details": [
+        "CCTV systems",
+        "Perimeter Security",
+        "Setting up Control Centers",
+        "Access Control Systems",
+        "Visitors Management System"
+      ]
+    },
+    {
+      "id": 10003,
+      "name": "Networking Solutions",
+      "img": "./assets/images/networking.png",
+      "description": "",
+      "details": [
+        "Structure Cabling",
+        "IP Telephony",
+        "Routing & Switching",
+        "Perimeter & Core Firewalls",
+        "Wireless Networking",
+        "SDWAN"
+      ]
+    },
+    {
+      "id": 10004,
+      "name": "Parking Solutions",
+      "img": "./assets/images/parking.png",
+      "description": "",
+      "details": [
+        "Parking Guidance System",
+        "Parking Revenue System",
+        "Speed Gates",
+        "Turnstile gates",
+        "Hydraulic Bollards",
+        "Road Blockers",
+        "Automatic Barriers",
+        "Ticketing Systems",
+        "Booth Systems",
+        "VIP/Valet Parking"
+      ]
+    },
+    {
+      "id": 10005,
+      "name": "Information Security",
+      "img": "./assets/images/infosec.png",
+      "description": "",
+      "details": [
+        "Identity and Privilege Access",
+        "Management (PAM)",
+        "Integrated Risk Management",
+        "Threat Detection and Response",
+        "Application and Email Security",
+        "Data Loss Prevention (DLP)",
+        "Cloud Security",
+        "Security Operation Center"
+      ]
+    },
+    {
+      "id": 10006,
+      "name": "Fiber Optic Solutions",
+      "img": "./assets/images/fibreOptic.png",
+      "description": "",
+      "details": [
+        "Supply and Installation",
+        "Design Services for Complete Fiber Optic System",
+        "Cable pulling & Splicing Services",
+        "Testing & Reporting Services"
+      ]
+    },
+    {
+      "id": 10001,
+      "name": "Electrical Solutions",
+      "img": "./assets/images/electric-services.png",
+      "description": "",
+      "details": [
+        "Supply",
+        "Installation",
+        "Testing & Commissioning",
+        "UPS System",
+        "Earthing and boring solutions",
+        "Electrical maintenance"
+      ]
+    },
+    {
+      "id": 10007,
+      "name": "Audio & Video",
+      "img": "./assets/images/audio.jpg",
+      "description": "",
+      "details": [
+        "Design",
+        "Supply",
+        "Installation",
+        "Testing & Commissioning"
+      ]
+    },
+    {
+        "id": 10008,
+        "name": "Software /Cloud Services",
+        "img": "./assets/images/cloud-computing.jpeg",
+        "description": "",
+        "details": [
+          "Design ,Delivery, Testing & Commissioning",
+          "loud Consulting & Enablement Services",
+          "Multi cloud Management",
+          "IT Service Management",
+          "Managed Services & Solutions",
+          "Google cloud Services",
+          "DevOps Services",
+          "Microsoft cloud services"
+        ]
+      },
+      {
+        "id": 10009,
+        "name": "Data Center Solutions",
+        "img": "./assets/images/datacenter.jpeg",
+        "description": "",
+        "details": [
+          "Power Systems",
+          "DCIM",
+          "Rack & Containment System",
+          "Data Center Interiors",
+          "Sensitive Compartmented Information Faculty (SCIF)"
+        ]
+      },
+      {
+        "id": 100010,
+        "name": "IT Infrastructure Solutions",
+        "img": "./assets/images/itinfra.jpeg",
+        "description": "",
+        "details": [
+          "Servers & Storage",
+          "Passive Network Systems With R&M , Panduit & Leviton",
+          "Converged and Hyper converged Solution",
+          "High Performance Computing (HPC)",
+          "Workspace and Server Virtualization",
+          "Private, Public and Hybrid Cloud Solutions"
+        ]
+      }, 
+      {
+        "id": 100011,
+        "name": "Digital Transformation",
+        "img": "./assets/images/digital.jpeg",
+        "description": "",
+        "details": [
+          "IT Modernization",
+          "Big Data & Data Analytics",
+          "Robotic Process Automation",
+          "Consulting on Digital Transformation Services"
+        ]
+      },
+      {
+        "id": 100012,
+        "name": "Solar System Solutions",
+        "img": "./assets/images/solar.jpeg",
+        "description": "",
+        "details": [
+          "Design", 
+          "Supply",
+          "Installation",
+          "Testing & Commissioning",
+          "Solar maintenance"
+        ]
+      },
+      {
+        "id": 100013,
+        "name": "Signage Solution",
+        "img": "./assets/images/signage.jpeg",
+        "description": "",
+        "details": [
+          "Design",
+          "Supply and Installation",
+          "Pole Installation",
+          "Indoor/Outdoor Signs",
+          "Digital signs/Way findings and Kiosks"
+        ]
+      },
+      {
+        "id": 100014,
+        "name": "Service Level Agreement",
+        "img": "./assets/images/service.jpeg",
+        "description": "",
+        "details": [
+          "Level -1 & 2 Support",
+          "Preventive maintenance",
+          "Corrective maintenance",
+          "AMC Support"
+        ]
+      }
+  ],
+
+  "CompanyContactDetails": {
+    "address": "Abdul Rahman Bin Jassim Street, AL Wakrah, Doha, Qatar",
+    "address1": "Office no: 03, Building no: 14",
+    "address2": "Abdul Rahman Bin Jassim Street",
+    "address3": "AL Wakra, Doha, Qatar",
+    "phone": "+974 44357958",
+    "mobile": "+974 50216760",
+    "email": "info@innovizqatar.com",
+    "website": "www.innovizqatar.com"
+  },
+
+  "vacancies": [{
+    "id": 1100,
+    "positionName": "Web Developer",
+    "experience": "2 - 3years",
+    "salary": "QAR 6,000/month",
+    "jobType": ["Full-time", "Temporary", "Permanent"],
+    "responsibiltyDesc": "sjvnsjkvbjsbvsdbvdsbvhjsbvhjsbdvkjbsdjvnsiofdnckvlnd",
+    "responsibilities": ["dfsdf", "sdfdsf"] 
+  },
+  {
+    "id": 1101,
+    "positionName": "Service Developer",
+    "experience": "2 - 3years",
+    "salary": "QAR 6,000/month",
+    "jobType": ["Full-time", "Temporary", "Permanent"],
+    "responsibiltyDesc": "sjvnsjkvbjsbvsdbvdsbvhjsbvhjsbdvkjbsdjvnsiofdnckvlnd",
+    "responsibilities": ["dfsdf", "sdfdsf"] 
+  }]
+}

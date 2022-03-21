@@ -1,0 +1,11 @@
+.dummy-container {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+}
+
+.heading-row {
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+}
+

@@ -1,0 +1,36 @@
+<section class="client-content" *ngIf="!showSpinner">
+    <div class="container" style="margin-inline: 25px;">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="fs-6 text-md-start text-break text-wrap text-para ">
+                    <b>We</b> partner with large and small organizations in the private, public and non-profit
+                     sectors. Our clients employ diverse workforces that are both non-unionised and 
+                     unionised, professional and entry level, with skills and vision. We've worked with 
+                     organisatons in all major sectors mainly, healthcare, manufacturing, 
+                     transportation, professional services, technology, as well as the government and
+                     profit sectors. Happy and satisfied partners depicts the success of our organisation.                </p>
+            </div>
+        </div>
+    </div>
+    <hr class="md-5" style="margin-inline: 30px;">
+    <div class="conatiner" style="margin-inline: 65px;">
+        <div class="row md-5">
+            <div class="col-md-3 md-5" style="margin-bottom: 20px;" *ngFor="let client of clients; let i = index">
+                <div class="border box md-5">
+                    <img [src]=client.partnerLogo class="card-img-top img-fluid" alt="..." 
+                    style="height: 6rem;" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="loadingContent" *ngIf="showSpinner">
+    <div class="overlay">
+        <div class="spinner-wrapper">
+            <app-spinner message="Data Loading"></app-spinner>
+        </div>
+    </div>
+
+    <div class="loaded-content" [class.blurred]="showSpinner">
+    </div>
+</section>

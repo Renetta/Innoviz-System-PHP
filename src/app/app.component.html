@@ -1,0 +1,143 @@
+<section class="loadingContent" *ngIf="showSpinner" style="margin-top: 100px;">
+  <div class="overlay">
+    <div class="spinner-wrapper">
+      <app-spinner message="Data Loading"></app-spinner>
+    </div>
+  </div>
+
+  <div class="loaded-content" [class.blurred]="showSpinner">
+  </div>
+</section>
+<section id="nav-header" *ngIf="!showSpinner">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light" [class.nav-background-change]="scrollDown">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home"><img [src]="'./assets/images/logo.png'" width="100"
+          alt="InnovizLogo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" style="background: #84a5c3;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end justify-content-center" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header" [class.canvas-background-change]="canvas">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img [src]="'./assets/images/logo.png'" width="100"
+              alt="InnovizLogo" /><b>Innoviz Systems</b></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" [class.canvas-background-change]="canvas">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item active" data-bs-dismiss="offcanvas">
+              <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="offcanvasNavbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" routerLinkActive="active">
+                Overview
+              </a>
+              <div class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown" data-bs-dismiss="offcanvas">
+                <a class="dropdown-item" routerLink="/our-company" routerLinkActive="active">About Us</a>
+                <a class="dropdown-item" routerLink="/profile" routerLinkActive="active">Company Profile</a>
+                <a class="dropdown-item" routerLink="/home">Our Partners</a>
+              </div>
+            </li>
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <a class="nav-link" routerLink="/careers" routerLinkActive="active">Careers</a>
+            </li>
+            <li class="nav-item" data-bs-dismiss="offcanvas">
+              <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<!-- <div id="loader" class="spinner"></div>  -->
+<router-outlet (activate)="onActive()" *ngIf="!showSpinner">
+  <div class="showWhatsappIcon">
+    <button type="button" class="btn btn-primary whatsapp-button" (click)="whatsapp()">
+      <i class="bi bi-whatsapp" style="font-size: 30px;"></i>
+      </button>
+  </div>
+  <div class="showEnquiryIcon" *ngIf="showenquirybutton">
+    <button type="button" class="btn btn-primary enquiry-button" (click)="contactuspage()">
+      <i class="bi bi-envelope-fill enquiry-icon"></i><span>Send Enquiry</span>
+      </button>
+  </div>
+</router-outlet>
+
+<!-- footer section -->
+
+<footer class="site-footer" *ngIf="!showSpinner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="heading">Our Company</span>
+        <div class="space-align"></div>
+        <p>We aim in providing right and specific solutions to clients.
+          We take care of the growing market in the state of Qatar with our knowledge and expertise.</p>
+        <!-- <p><a routerLink="/our-company" class="about-link">Click here to know more</a></p> -->
+        <div class="space-align"></div>
+        <div class="social-media-buttons">
+          <button type="button" class="btn btn-primary linkedIn-button" (click)="linkedIn()"><i
+              class="bi bi-linkedin"></i></button>
+        </div>
+
+        <!-- <share-buttons theme="circles-dark" [include]="['linkedin', 'whatsapp']" [showIcon]="true" [showText]="false"
+          url="https://www.linkedin.com/in/innoviz-systems-915bb9226/" description="Innoviz Systems" class="pt-5">
+        </share-buttons> -->
+      </div>
+      <div class="col-md-4">
+        <span class="heading">Contact Us</span>
+        <div class="space-align"></div>
+        <ul class="list-unstyled footer-link">
+          <li class="d-flex">
+            <span class="me-3" style="padding-right: 15px;">
+              <fa-icon [icon]="faMap"></fa-icon>
+            </span>
+            <span class="tex-white">Abdul Rahman Bin Jassim Street, <br>
+              AL Wakrah, <br>Doha, Qatar</span>
+          </li>
+          <li class="d-flex">
+            <span class="me-3" style="padding-right: 15px;">
+              <fa-icon [icon]="faPhone"></fa-icon>
+            </span>
+            <span class="tex-white">+974 44357958</span>
+          </li>
+          <li class="d-flex">
+            <span class="me-3" style="padding-right: 15px;">
+              <fa-icon [icon]="faMobile"></fa-icon>
+            </span>
+            <span class="tex-white">+974 50216760 </span>
+          </li>
+          <li class="d-flex">
+            <span class="me-3" style="padding-right: 15px;">
+              <fa-icon [icon]="faEnvelope"></fa-icon>
+            </span>
+            <span class="tex-white">info@innovizqatar.com</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <span class="heading">Quick Links</span>
+        <div class="space-align"></div>
+        <ul class="list-unstyled footer-link">
+          <li><a routerLink="/our-company">Our Company</a></li>
+          <li><a routerLink="/services">Services</a></li>
+          <li><a routerLink="/careers">Careers</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-12 text md center text-center">
+        <p>Copyright @2022: Innoviz Systems. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>

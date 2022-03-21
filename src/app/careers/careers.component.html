@@ -1,0 +1,108 @@
+<section class="dummy-container mb-5"></section>
+<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
+    <div class="overlay">
+        <div class="spinner-wrapper">
+            <app-spinner message="Data Loading"></app-spinner>
+        </div>
+    </div>
+
+    <div class="loaded-content" [class.blurred]="showSpinner">
+    </div>
+</section>
+<section class="careers mb-5" *ngIf="!showSpinner">
+    <div class="container">
+        <div class="row heading-row justify-content-center">
+            <div class="col-md-4 text-center fs-2">
+                Current Vacancies
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NO JOBS RIGHT NOW -->
+<section class="noJobs" *ngIf="!showSpinner">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-md-12">
+                <p class="text-start text-break fs-6 lh-base text-para">
+                    We do not have any vacancies at the moment. Please submit your CV through
+                    <a routerLink="/home" class=" fw-bold link-primary">"Job Applications"</a>. We will contact you soon
+                    if your resume is matching with any upcoming jobs.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JOBS AVAILABLE -->
+<!-- <section class="jobs mb-5" *ngIf="!showSpinner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" *ngIf="jobs && jobs.length">
+                <p class="text-start text-break fs-6 lh-base">Number of Vacancies: <b>{{jobs.length}}</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="accordion" attr.id="accordionExample" *ngFor="let job of jobs; let i = index;">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
+                                [attr.data-bs-target]="'#collapseOne_' + i"
+                                [attr.aria-bs-controls]="'collapseOne_' + i">
+                                {{job.positionName}}
+                            </button>
+                        </h2>
+                        <div [attr.id]="'collapseOne_' + i" class="accordion-collapse collapse"
+                             aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="row align-items-start job-details-heading">
+                                    <p class="fs-5"><u>Job details</u></p>
+                                </div>
+                                <div class="row align-items-start">
+                                    <p class="fs-6"><span class="job-sub-heading">Salary</span><br>
+                                        {{job.salary}}
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <div class="row align-items-start">
+                                        <p class="fs-6"><span class="job-sub-heading">Job Type</span></p>
+                                        <div *ngFor="let type of job.jobType">
+                                            {{type}}<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row align-items-start">
+                                    <p><span class="job-sub-heading">Full job Description</span></p>
+                                </div>
+                                <div class="row align-items-center">
+                                    <p>Detailed roles and Responsibilities</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="text-start text-break fs-6 lh-base">
+                                            {{job.responsibiltyDesc}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul>
+                                            <li *ngFor="let duties of job.responsibilities;">
+                                                {{duties}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

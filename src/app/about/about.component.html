@@ -1,0 +1,193 @@
+<section class="dummy-container" *ngIf="showSpinner">
+</section>
+<section #aboutus class="heading-section img-fluid" style="
+  background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
+  url('./assets/images/about-image.png');" *ngIf="!showSpinner">
+    <div id="aboutUsContentID" class="caption">
+        <h1>ABOUT US</h1>
+        <p>Increasing your competitive advantage by aligning strategy with people and culture.
+        </p>
+        <!-- <h1>About <b>us</b></h1> -->
+    </div>
+</section>
+<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
+    <div class="overlay">
+        <div class="spinner-wrapper">
+            <app-spinner message="Data Loading"></app-spinner>
+        </div>
+    </div>
+
+    <div class="loaded-content" [class.blurred]="showSpinner">
+    </div>
+</section>
+<section  id="all-content" class="all-content" *ngIf="!showSpinner">
+    <div class="row" style="width: 100%;">
+        <div class="col-md-9" *ngIf="showAboutTemp">
+            <div  class="about-content">
+                <div class="container" style="margin-inline: 25px;">
+                    <div class="row">
+                        <div class="col-md-5 mb-5 box">
+                            <h3 class="text-head"><span class="text-sub-head">Our</span> Company</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="img-head">
+                                <img src="./assets/images/about3.png" alt="about" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div>
+                                <p class="text-break lh-base text-md-start text-para">
+                                    <span style="font-size: xx-large;"><b>I</b></span>nnoviz Systems is a total solution
+                                    provider of system integrator,
+                                    Parking solutions, security solution, network solution and all the ELV solutions.
+                                    <br><br>
+                                    Our scope includes design, system integration, equipment supply,
+                                    installation operation, maintenance after sales service.
+                                    <br><br>
+                                    We have executed numerous projects in Qatar, we will continue
+                                    to expand our operation throughout the region to support increasing market needs.
+                                    <br><br>
+                                    Innoviz systems having qualified employees with solid experiences
+                                    in the field of system integration, parking systems, security systems,
+                                    network systems …
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vision-content"  style="margin-inline: 25px;">
+                <div class="container">
+                    <hr>
+                    <div class="row" >
+                        <div class="col-md-5 mb-5 box-mission ">
+                            <h3 class="text-head"><span class="text-sub-head">Our</span> Mission</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-5">
+                                <p class="text-md-start text-break text-para"><b>To deliver high-quality</b>,
+                                    cost-effective projects on schedule by employing and
+                                    supporting motivated, flexible, and focused teams. We value the importance of
+                                    our relationships and will continue to remain fair and true in our dealings
+                                    with all employees, clients, vendors, and partners.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-5 mb-5 box">
+                            <h3 class="text-head"><span class="text-sub-head">Our</span> Vision</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-5">
+                                <p class="text-md-start text-break text-para"><b>INNOVIZ SYSTEMS</b>, through its
+                                    various entities and initiatives,
+                                    would pursue this social cum business objective towards creating and
+                                    facilitating value-added vocational education and integrated development
+                                    for the youths of the country from all segments/regions towards a sustainable
+                                    and enriched social profile for them.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9" *ngIf="!showAboutTemp">
+            <div class="about-content">
+                <div class="container"  style="margin-inline: 25px;">
+                    <div class="row">
+                        <div class="col-md-5 mb-5 box">
+                            <h3 class="text-head"><span class="text-sub-head">Our</span> Clients</h3>
+                        </div>
+                    </div>
+                </div>
+                    <app-clients-page [clients]="clientsDetails"></app-clients-page>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="container table-container">
+                <div class="table-content">
+                    <div class="row">
+                        <table class="table table-stripped" style="margin-top: 20px;">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th scope="col"><b>Our Company</b></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngIf="clientsTemp || partnersTemp">
+                                    <td class="font-td" >
+                                        <div class="d-grid gap-2 col-12 mx-auto">  
+                                            <a class="btn " (click)="viewAboutSection()" role="button">
+                                                <i class="bi bi-building icon-white"></i>
+                                                <span style="padding-left: 10px;">About US</span> </a>
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="font-td">
+                                        <div class="d-grid gap-2 col-12 mx-auto">  
+                                            <a class="btn " (click)="goToServicesPage()" role="button">
+                                                <i class="bi bi-hdd-rack icon-white"></i>
+                                                <span style="padding-left: 10px;">Services</span> </a>
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr *ngIf="!clientsTemp">
+                                    <td class="font-td">
+                                        <!-- <button type="button" class="btn btn-primary" (click)="showClientsPage()"> </button> -->
+                                        <div class="d-grid gap-2 col-12 mx-auto">  
+                                            <a class="btn " (click)="showClientsPage()" role="button">
+                                                <i class="bi bi-people-fill icon-white"></i>
+                                                <span style="padding-left: 10px;">Clients</span></a>
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr *ngIf="!partnersTemp">
+                                    <td class="font-td">
+                                    <div class="d-grid gap-2 col-12 mx-auto">  
+                                        <a class="btn " (click)="showPartnersPage()" role="button">
+                                            <i class="bi bi-person-circle icon-white"></i><span style="padding-left: 10px;">Partners</span></a>
+                                      </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+                <div class="container contact-container">
+                    <div class="about-contact-section mb-5">
+                        <div class="card text-center">
+                            <img src='./assets/images/contactme.png' class="card-img-top img-fluid " alt="..." style="height: 12rem;" />
+                            <div class="card-body" style="background: #19456b;">
+                                <!-- <h5 class="card-title">Do you have any Questions?</h5> -->
+                                <p class="card-text" style="color: #ced4da9c; font-size: 13px;">
+                                    If you have any question please do not hesitate to contact us, 
+                                    we will be pleased to answer any questions.
+                                    
+                                </p>
+                                    <br>
+                                    <div class="d-grid gap-2 col-md-12 mx-auto">
+                                    <button class="btn btn-primary contact-button" type="button" 
+                                    (click)="goToContactPage()" style="margin-left: -15px;">
+                                    <span style="padding: 2px;"><i class="bi bi-chat-left-text-fill"></i></span>
+                                        Contact us
+                                </button>
+                                      </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+.text-para {
+    /* font-size: 16px; */
+    color: #495057;
+    line-height: 1.88;
+}
+
+.box {
+    border-bottom: 4px solid #f05a2a !important;
+    border-left: 4px solid #19456bb8 !important;
+    padding: 10px;
+    box-shadow: 0 18px 25px rgb(0 0 0 / 20%);
+}

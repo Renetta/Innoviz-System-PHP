@@ -1,0 +1,25 @@
+.dummy-container {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+}
+
+.heading-row {
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+
+}
+
+.job-details-heading {
+    font-weight: 600;
+}
+
+.job-sub-heading {
+    font-weight: 600;
+}
+
+.text-para {
+    font-size: 16px;
+    color: #495057;
+    line-height: 1.88;
+}

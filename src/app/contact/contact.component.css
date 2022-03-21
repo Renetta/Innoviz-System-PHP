@@ -1,0 +1,294 @@
+/* .contact-size {
+    margin-top: 110px;
+} */
+/* 
+.container {
+    background: #e8edf0;
+    margin-bottom: 58px;
+    padding: 5px;
+}
+
+.contact-header {
+        background: #435b7e;
+        color: aliceblue;
+        padding: 0px;
+        text-align: center;
+        margin: 15px;
+}
+
+.contact-form-row {
+    margin-top: -50px;
+    padding: 80px;
+}
+
+.contact-container {
+    background-color: #fff;
+}
+
+.contact-address-circle::before {
+    content: "\f3e7";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 14px;
+
+}
+
+.contact-phone-circle::before {
+    content: "\F5B4";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 14px;
+}
+
+.contact-mail-circle::before {
+    content: "\F6B9";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 14px;
+}
+
+.contact-mobile-circle::before {
+    content: "\F4E2";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 14px;
+}
+
+i {
+    font-size: 2rem; 
+    color: white;
+    padding: 25%;
+}
+
+.contact-font {
+    font-size: small;
+}
+
+.contact-font-mobile {
+    font-size: small;
+
+} */
+
+.dummy-container {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+}
+
+.contact {
+    /* margin-top: 70px; */
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: opacity 1s ease;
+}
+
+.footer-contact-section {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.contactus-heading {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+.contact-info {
+    color: #fff;
+    line-height: 30px;
+    font-size: large;
+    font-style: italic;
+}
+
+.contact-container {
+    background-color: #fff;
+}
+
+.contact-address-circle::before {
+    content: "\f3e7";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #19456b;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 10px;
+
+}
+
+.contact-font {
+    font-size: small;
+    padding: 10px;
+}
+
+.contact-phone-circle::before {
+    content: "\F5B4";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 9px;
+}
+
+.contact-mail-circle::before {
+    content: "\F6B9";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 9px;
+}
+
+.contact-mobile-circle::before {
+    content: "\F4E2";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 9px;
+}
+
+.contact-clock-circle {
+    content: "\F291";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2553b8;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 9px;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+
+.map-box {
+    box-shadow: 0 0 10px 1px #f05a2a; 
+}
+
+.contact-box {
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 1px #a47b66 
+}
+
+.contact-icon-align {
+    /* margin-inline-start: 40px; */
+    margin-top: 20px;
+}
+
+.underline {
+    width: 30%;
+    height: 3px;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    border-radius: 3px;
+    position: absolute;
+    top: 45px;
+    left: 10px;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background-color: #f05a2a;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: 4px;
+    }
+
+    100% {
+        left: 90%;
+    }
+}
+
+.label-style {
+    color: #444;
+}
+
+.contact-font-sub {
+    padding-top: 12px;
+    /* padding-left: 15px; */
+    margin-inline: 10px;
+    font-size: 17px;
+    font-family: 'bootstrap-icons';
+}
+
+
+/* .footer-contact {
+    background-image: url('/assets/images/contactus1.jpeg');
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: -75px;
+    filter: grayscale(50%); 
+}*/
+
+.footer-contact {
+    margin-top: -75px;
+    background: #7d96b370;
+}
+
+.footer-contact .footer-align {
+    margin-top: 75px;
+    position: relative
+}
+
+.footer-contact .contact-label {
+    color: #19456b;;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 7px;
+    padding-left: 10px;
+}
+
+.has-danger {
+    border: 2px solid red;
+    
+}
