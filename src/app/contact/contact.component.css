@@ -292,3 +292,12 @@ i {
     border: 2px solid red;
     
 }
+
+.icon-color {
+    background-image: linear-gradient(to right, #1b78bd, #f1722f);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
-import { FileSaverService } from 'ngx-filesaver';
+// import { FileSaverService } from 'ngx-filesaver';
 import { Observable } from 'rxjs';
 import { saveAs } from 'file-saver';
 

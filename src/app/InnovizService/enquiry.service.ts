@@ -15,8 +15,16 @@ export class EnquiryService {
   // }
 
   rooteURL = "http://innovizqatar.com/php/";
+  // rooteURL = "http://localhost/";
   sendEnquiry(enquiry: any) {
-    console.log(this.rooteURL);
     return this.http.post(this.rooteURL + 'mail.php', enquiry, {responseType: 'text'});
+  }
+
+  getData() {
+    return this.http.get<any>('./assets/innovizDatas.json');
+  }
+
+  sendjobApplication(career: any) {
+    return this.http.post(this.rooteURL + 'career.php', career, {responseType: 'text'});
   }
 }

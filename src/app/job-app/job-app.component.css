@@ -1,0 +1,23 @@
+.dummy-container {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+}
+
+.contact {
+    /* margin-top: 70px; */
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: opacity 1s ease;
+}
+
+.back-button {
+    background: #295281;
+    border-color: #244c7a;
+    padding: 1px;
+    margin: 10px;
+    position: relative;
+}

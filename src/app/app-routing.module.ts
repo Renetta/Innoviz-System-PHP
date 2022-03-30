@@ -19,13 +19,13 @@ const routes: Routes = [
   { path: "careers", component: CareersComponent},
   { path: "contact", component: ContactComponent},
   { path: "clients", component: ClientsPageComponent},
-  { path: "profile", component: ProfileComponent}
-  // { path: "careers/job/application/:name", component: JobAppComponent},
+  { path: "profile", component: ProfileComponent},
+  { path: "careers/job/application/:name/:id", component: JobAppComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    useHash: true,
+    // useHash: true,
     preloadingStrategy: PreloadAllModules
   })],
   exports: [RouterModule]

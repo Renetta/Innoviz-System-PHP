@@ -23,3 +23,54 @@
     color: #495057;
     line-height: 1.88;
 }
+
+.align-desc {
+    min-height: 20px;
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: clip;
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}
+
+.top-align {
+    box-shadow: 1px 10px 2px 1px steelblue;
+    ;
+}
+
+.custom-file-input.selected:lang(en)::after {
+    content: "" !important;
+}
+
+.custom-file {
+    overflow: hidden;
+}
+
+.custom-file-input {
+    white-space: nowrap;
+}
+
+.apply-btn {
+    background: #49507d;
+    border-color: #49507d;
+}
+
+.job-btn {
+    background: linear-gradient(to right, #1b78bd, #f1722f);
+    border-color: transparent;
+}
+
+.job-btn:hover {
+    transition: 1s;
+    background: #f05a2a;
+}
+
+.job-btn:focus, .job-btn:active {
+    background: #f05a2a;
+}
+
+.back {
+    background: #f05a2a;
+}

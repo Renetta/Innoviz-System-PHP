@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppComponent } from './app.component';
@@ -19,10 +19,12 @@ import { EnquiryService } from './InnovizService/enquiry.service';
 import { ClientsPageComponent } from './clients-page/clients-page.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import { NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { FileSaverModule } from 'ngx-filesaver';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { JobAppComponent } from './job-app/job-app.component';
+// import { FileUploader, FileSelectDirective } from 'ng2-file-upload';
+import { FileUploadModule} from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -48,13 +50,13 @@ import { JobAppComponent } from './job-app/job-app.component';
     FormsModule,
     ReactiveFormsModule,
     NgxExtendedPdfViewerModule,
-    FileSaverModule,
+    FileUploadModule
+    // FileSaverModule,
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
-    EnquiryService
+  providers: [
+    EnquiryService,
   ],
-  bootstrap: [AppComponent]
+  // { provide: LocationStrategy, useClass: HashLocationStrategy },
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
-// platformBrowserDynamic().bootstrapModule(AppModule);
+export class AppModule {}

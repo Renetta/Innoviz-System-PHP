@@ -26,28 +26,37 @@ export class AppComponent implements OnInit {
   faMobile = faMobile;
   currentRoute!: string;
   showenquirybutton = true;
+  showText = false;
   constructor(
     private el: ElementRef,
     private render: Renderer2,
     private router: Router
   ) {
     this.showenquirybutton = true;
+    this.showText = true;
+    this.checkURL();
+  }
+  showSpinner = true;
+  ngOnInit() {
+    this.checkURL();
+    setTimeout(() => {
+      this.showSpinner = false;
+      localStorage.setItem('showSpinner', 'true');
+    }, 2400);
+  }
+
+  checkURL() {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         this.showenquirybutton = true;
+        if (e.url == '/home') {
+          this.showText = false;
+        }
         if (e.url == '/contact') {
           this.showenquirybutton = false;
         }
       }
     });
-    
-  }
-  showSpinner = true;
-  ngOnInit() {
-    setTimeout(() => {
-      this.showSpinner = false;
-      localStorage.setItem('showSpinner', 'true');
-    }, 2400);
   }
 
   linkedIn() {
@@ -57,7 +66,7 @@ export class AppComponent implements OnInit {
   whatsapp() {
     // window.open("https://wa.me/+919946759352?text=https://innovizqatar.com/");
     window.open(
-      'https://wa.me/+97450216760?text=Hello, I would like to know more about your services in Innoviz Systems. https://innovizqatar.com/#/services'
+      'https://wa.me/+97466318363?text=Hello, I would like to know more about your services in Innoviz Systems. https://innovizqatar.com/services/'
     );
   }
 
@@ -92,8 +101,9 @@ export class AppComponent implements OnInit {
 
     localStorage['canvasOpen'] = this.canvas;
 
-    return false;
+    // return false;
   }
+  
 }
 function isButton(
   el: any,

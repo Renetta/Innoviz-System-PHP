@@ -1,9 +1,5 @@
-
-
-
 <section class="header img-fluid" style=" background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
-      url('./assets/images/ictbanner5.png');"
-      >
+      url('./assets/images/ictbanner5.png');">
   <div class="text-box">
     <h1><a routerLink="/our-company">INNOVIZ <span style="padding-right: 10px;"></span>SYSTEMS</a></h1>
     <p>
@@ -14,19 +10,19 @@
 </section>
 
 <section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
-  <div class="overlay" >
-      <div class="spinner-wrapper">
-          <app-spinner message="Data Loading"></app-spinner>
-      </div>
+  <div class="overlay">
+    <div class="spinner-wrapper">
+      <app-spinner message="Data Loading"></app-spinner>
+    </div>
   </div>
-  
+
   <div class="loaded-content" [class.blurred]="showSpinner">
   </div>
 </section>
 
 <section class="services" *ngIf="!showSpinner">
   <div class="box-mission ">
-    <h3 class="text-head"><span class="pt-2"><span class="text-sub-head">Our</span> Services</span></h3>
+    <h3 class="text-head-dev"><span class="pt-2"><span class="text-sub-head">Our</span> Services</span></h3>
   </div>
   <p class="text-break lh-base text-para">
     We provide all kinds of Information and Communications technology solutions and we are always
@@ -55,6 +51,29 @@
     </div>
   </div>
 </section>
+<!-- <section class="website main-prow" *ngIf="!showSpinner">
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <img src="./assets/images/website-design.jpg" alt="about" class="img-fluid">
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="box-mission " style="margin: 10px;">
+        <h3 class="text-head-dev" ><span class="pt-2"><span class="text-sub-head">Web</span> Development</span></h3>
+      </div>
+
+      <div class="about-desc mb-2">
+        <p class="text-break lh-base text-para" style="color: #495057;">
+          <span style="font-size: xx-large;"><b>A</b></span> website is that you will have a central point
+           of contact for your upcoming customers.
+           <br><br>
+          Innoviz Systems offers  website maintenance service, web hosting service, 
+          website redesigning, eCommerce and website designing for the companies.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section> -->
 <section id="about-content" *ngIf="!showSpinner">
   <div class="container">
     <div class="row main-row p-2" style=" background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
@@ -95,7 +114,7 @@
   <div class="conatiner border border-4 rounded-pill main-prow"
     style="    background-image: url(./assets/images/clients.jpg);">
     <div class="box-mission ">
-      <h3 class="text-head"><span class="pt-2"><span class="text-sub-head">Our</span> Clients</span></h3>
+      <h3 class="text-head-dev"><span class="pt-2"><span class="text-sub-head">Our</span> Clients</span></h3>
     </div>
     <div class="container" style="position: sticky;">
       <owl-carousel-o [options]="partnerOptions">
@@ -108,18 +127,3 @@
     </div>
   </div>
 </section>
-<!-- <section id="client-content" class="partners">
-
-  <div class="box-mission ">
-    <h3 class="text-head"><span class="pt-2"><span class="text-sub-head">Our</span> Clients</span></h3>
-  </div>
-  <div class="container" style="position: sticky;">
-    <owl-carousel-o [options]="partnerOptions">
-      <ng-template carouselSlide *ngFor="let partner of partners; let i=index;">
-        <div class="md-5">
-          <img [src]="partner.partnerLogo" alt="partner" style="width: 150px; top: 0;">
-        </div>
-      </ng-template>
-    </owl-carousel-o>
-  </div>
-</section> -->

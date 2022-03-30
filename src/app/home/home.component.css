@@ -142,14 +142,15 @@
     cursor: pointer;
     margin-top: 30px;
     transform: translate(0%, -50%);
+    /* background: linear-gradient(to right, #1b78bd, #f1722f); */
 }
 
 .visit-btn:hover {
     border: 1px solid #f05a2a;
     color: #fff;
-    font-weight: bold;
+    /* font-weight: bold; */
     background: #f05a2a;
-    transition: 1.5s;
+    transition: 1s;
 }
 
 /* nav .bi {
@@ -166,7 +167,7 @@
 
 }
 
-.services .text-head {
+.services .text-head-dev {
     color: #19456b;
     font-size: 30px;
     font-weight: bolder;
@@ -253,7 +254,7 @@
 
 .link a {
     color: #fff;
-    background: #f05a2a;
+    background: linear-gradient(to right, #1b78bd, #f1722f);
 }
 
 .link a:hover {
@@ -303,6 +304,10 @@
     box-shadow: 0 0 10px 1px #f05a2a;
 }
 
+.website {
+    margin: 75px;
+}
+
 .aboutus-content {
     /* background: #007bff7a; */
     /* background: rgb(245 65 7 / 73%); */
@@ -335,7 +340,7 @@
     position: relative;
 }
 .read-more-button {
-    background: #e94916;
+    background: linear-gradient(to right, #1b78bd, #f1722f);
     border: #fff;
     /* border-radius: 20px; */
 }
@@ -407,7 +412,7 @@
     color: #dee2e6a1;;
 }
 
-.partners .main-prow {
+.main-prow {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -422,6 +427,28 @@
 }
 
 .about-content .text-head {
+    color: #19456b;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.website .text-head {
+    color: #19456b;
+    font-size: 30px;
+    font-weight: bolder;
+    /* margin-top: -75px; */
+}
+
+.text-head-dev {
+    position: relative;
+    /* height: 140%; */
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    overflow: hidden;
+    border-right: 0;
+    /* margin-top: 25px; */
+    /* margin-left: 10px; */
     color: #19456b;
     font-size: 30px;
     font-weight: bolder;

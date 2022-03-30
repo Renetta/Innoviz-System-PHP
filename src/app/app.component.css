@@ -1,5 +1,5 @@
 .navbar-brand {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .nav-item .nav-link {
@@ -11,7 +11,7 @@
 
 .nav-item .nav-link:hover,
 .nav-item .nav-link.active {
-  background: #f05a2a;
+  background: linear-gradient(to right, #1b78bd, #f1722f);
   margin: auto;
 }
 
@@ -23,6 +23,17 @@
   z-index: 1;
   top: 0;
   left: 0; */
+}
+
+.multicolortext {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  /* background-image: #fff; */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .canvas-background-change {
@@ -67,11 +78,11 @@
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #f05a2a;
+  background-color: linear-gradient(to right, #1b78bd, #f1722f);
 }
 
 .dropdown-menu a:hover {
-  background: #f05a2a;
+  background: linear-gradient(to right, #1b78bd, #f1722f);
   margin: auto;
 }
 
@@ -148,7 +159,7 @@ footer {
   border: #50e371;
 }
 
-.whatsapp-button::after{
+.whatsapp-button::after {
   background-color: #50e371;
   border: #50e371;
 }
@@ -169,7 +180,7 @@ footer {
 .enquiry-button {
   min-width: 4em;
   min-height: 3em;
-  background-color: #f05a2a;
+  background: linear-gradient(to right, #1b78bd, #f1722f);
   border: #f05a2a;
 }
 

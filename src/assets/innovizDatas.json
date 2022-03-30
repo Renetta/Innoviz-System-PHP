@@ -332,6 +332,19 @@
           "Corrective maintenance",
           "AMC Support"
         ]
+      },
+      {
+        "id": 100014,
+        "name": "Website Development",
+        "img": "./assets/images/web-design.png",
+        "description": "",
+        "details": [
+          "Website design",
+          "Web Hosting services",
+          "Website maintenance service",
+          "Website redesigning",
+          "eCommerce"
+        ]
       }
   ],
 
@@ -346,22 +359,9 @@
     "website": "www.innovizqatar.com"
   },
 
-  "vacancies": [{
-    "id": 1100,
-    "positionName": "Web Developer",
-    "experience": "2 - 3years",
-    "salary": "QAR 6,000/month",
-    "jobType": ["Full-time", "Temporary", "Permanent"],
-    "responsibiltyDesc": "sjvnsjkvbjsbvsdbvdsbvhjsbvhjsbdvkjbsdjvnsiofdnckvlnd",
-    "responsibilities": ["dfsdf", "sdfdsf"] 
-  },
-  {
-    "id": 1101,
-    "positionName": "Service Developer",
-    "experience": "2 - 3years",
-    "salary": "QAR 6,000/month",
-    "jobType": ["Full-time", "Temporary", "Permanent"],
-    "responsibiltyDesc": "sjvnsjkvbjsbvsdbvdsbvhjsbvhjsbdvkjbsdjvnsiofdnckvlnd",
-    "responsibilities": ["dfsdf", "sdfdsf"] 
-  }]
+  "vacancies": [
+    
+  ]
 }
+
+

@@ -11,8 +11,10 @@
 <section id="nav-header" *ngIf="!showSpinner">
   <nav class="navbar fixed-top navbar-expand-lg navbar-light" [class.nav-background-change]="scrollDown">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/home"><img [src]="'./assets/images/logo.png'" width="100"
-          alt="InnovizLogo" /></a>
+      <a class="navbar-brand" routerLink="/home">
+        <img [src]="'./assets/images/logo.png'" width="100" alt="InnovizLogo"  class="d-inline-block"/>
+        <!-- <span class="multicolortext" *ngIf="showText">INNOVIZ SYSTEMS</span> -->
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar" style="background: #84a5c3;">
         <span class="navbar-toggler-icon"></span>
@@ -57,18 +59,21 @@
 </section>
 
 <!-- <div id="loader" class="spinner"></div>  -->
-<router-outlet (activate)="onActive()" *ngIf="!showSpinner">
-  <div class="showWhatsappIcon">
-    <button type="button" class="btn btn-primary whatsapp-button" (click)="whatsapp()">
-      <i class="bi bi-whatsapp" style="font-size: 30px;"></i>
+<section>
+  <router-outlet (activate)="onActive()" *ngIf="!showSpinner">
+    <div class="showWhatsappIcon">
+      <button type="button" class="btn btn-primary whatsapp-button" (click)="whatsapp()">
+        <i class="bi bi-whatsapp" style="font-size: 30px;"></i>
       </button>
-  </div>
-  <div class="showEnquiryIcon" *ngIf="showenquirybutton">
-    <button type="button" class="btn btn-primary enquiry-button" (click)="contactuspage()">
-      <i class="bi bi-envelope-fill enquiry-icon"></i><span>Send Enquiry</span>
+    </div>
+    <div class="showEnquiryIcon" *ngIf="showenquirybutton">
+      <button type="button" class="btn btn-primary enquiry-button" (click)="contactuspage()">
+        <i class="bi bi-envelope-fill enquiry-icon"></i><span>Send Enquiry</span>
       </button>
-  </div>
-</router-outlet>
+    </div>
+  </router-outlet>
+</section>
+
 
 <!-- footer section -->
 

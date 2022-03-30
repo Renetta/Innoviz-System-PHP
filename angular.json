@@ -79,8 +79,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "InnovizSystemsWebsite:build:production",
-            "proxyConfig": "proxy.conf.json"
+            "browserTarget": "InnovizSystemsWebsite:build:production"
           },
           "configurations": {
             "production": {

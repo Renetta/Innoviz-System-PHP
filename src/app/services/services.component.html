@@ -42,14 +42,14 @@
                     <div [attr.id]="'collapseOne_' + i" class="accordion-collapse collapse"
                         [class.show]='i == 0 ? true : false' aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div class="accordion-body" style="background: linear-gradient(to right, #1b78bd, #f1722f);">
                             <div class="row">
                                 <div class="col-md-8">
                                     <img src="{{service.img}}" alt={{service.name}}>
                                 </div>
                                 <div class="col-md-4">
                                     <ul>
-                                        <li *ngFor="let details of service.details" style="color: #495057;">
+                                        <li *ngFor="let details of service.details" style="color: #fff;">
                                             {{details}}
                                         </li>
                                     </ul>

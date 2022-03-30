@@ -1,1 +1,118 @@
-<p>job-app works!</p>
+<section class="dummy-container">
+</section>
+
+<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 300px;">
+    <div class="overlay">
+        <div class="spinner-wrapper">
+            <app-spinner message="Data Loading"></app-spinner>
+        </div>
+    </div>
+
+    <div class="loaded-content" [class.blurred]="showSpinner">
+    </div>
+</section>
+
+<section class="contact img-fluid" *ngIf="!showSpinner" style="
+background-image: linear-gradient(rgb(24 63 105), rgb(24 63 105 / 32%)),
+  url(./assets/images/office1.jpg); width: 100%; height: 100%;">
+    <div id="contactContentID" class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-md-4">
+                        <button class="btn btn-primary back-button" 
+                        (click)="backToCareersPage()" type="button">Back to Careers</button>
+                    </div>
+                </div>
+            </div>
+            <div class="conatiner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-5 ">
+                            <h3 style="color: #fff; text-align: center;">Join With <b>Us</b></h3>
+                        </div>
+                        <form class="g-3 needs-validation" id="formID" (ngSubmit)="sendApplication()" 
+                        #f="ngForm" novalidate enctype="multipart/form-data">
+                            <div class="mb-3 form-group">
+                                <input type="text" class="form-control" name="fname" [(ngModel)]="career.fname"
+                                    placeholder="First Name" required #fname="ngModel" [ngClass]="{
+                    'has-danger': fname.invalid && (fname.dirty || fname.touched),
+                    'has-success': fname.valid && (fname.dirty || fname.touched)
+                  }">
+                                <div class="form-control-feedback"
+                                    *ngIf="fname.errors && (fname.dirty || fname.touched)">
+                                    <p class="text-danger" *ngIf="fname?.errors?.['required']">First name is required
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <input type="text" class="form-control" name="lname" [(ngModel)]="career.lname"
+                                    placeholder="Last Name" required #lname="ngModel">
+                            </div>
+
+                            <div class="mb-3 form-group">
+                                <input type="email" class="form-control" name="email" [(ngModel)]="career.email"
+                                    placeholder="Your E-mail Address" required pattern="[^ @]*@[^ @]*" #email="ngModel"
+                                    [ngClass]="{
+                    'has-danger': email.invalid && (email.dirty || email.touched),
+                    'has-success': email.valid && (email.dirty || email.touched)
+                  }">
+                                <div class="form-control-feedback"
+                                    *ngIf="email.errors && (email.dirty || email.touched)">
+                                    <p class="text-danger" *ngIf="email?.errors?.['required']">Email is required</p>
+                                    <p class="text-danger" *ngIf="email?.errors?.['pattern']">Please, enter valid email
+                                        address</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-group">
+                                <input type="number" class="form-control" placeholder="Contact Number" name="phone"
+                                    [(ngModel)]="career.phone" required #phone="ngModel" [ngClass]="{
+                    'has-danger': phone.invalid && (phone.dirty || phone.touched),
+                    'has-success': phone.valid && (phone.dirty || phone.touched)
+                  }">
+                                <div class="form-control-feedback"
+                                    *ngIf="phone.errors && (phone.dirty || phone.touched)">
+                                    <p class="text-danger" *ngIf="phone?.errors?.['required']">Contact Number is
+                                        required</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-group" *ngIf="career.positionID != 0 ">
+                                <input type="text" class="form-control" name="position" [(ngModel)]="career.position"
+                                    placeholder="Position Name" #company="ngModel" disabled="true">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label" style="color: aliceblue;">Upload your resume</label>
+                                <input class="form-control" [formControl]="file" type="file" name="attachment" id="formFile"
+                                    (change)="onFileSelected($event)">
+                            </div>
+                            <div class="d-grid gap-2 col-12 mx-auto mb-5">
+                                <button type="submit" class="btn btn-primary btn-lg" 
+                                style="background:linear-gradient(to right, #1b78bd, #f1722f);"
+                                    [disabled]="f.invalid || emailSentSuccess" form="formID"
+                                    (click)="sendApplication()">
+                                    Send Message
+                                    <span class="spinner-border text-primary" *ngIf="emailSentSuccess" role="status">
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="alert alert-success d-flex align-items-center alert-dismissible fade show"
+                                role="alert" *ngIf="emailReceived">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                    aria-label="Success:">
+                                    <use xlink:href="#check-circle-fill" />
+                                </svg>
+                                <div class="mb-5">
+                                    {{responseMessage}}
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
