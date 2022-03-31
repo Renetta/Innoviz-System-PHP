@@ -95,7 +95,7 @@
     margin-left: 10px;
 }
 
-/* .about-content .box::before {
+.about-content .box::before {
     content: '';
     position: absolute;
     width: 95px;
@@ -105,7 +105,7 @@
     border-right: 0;
     left: 0;
     top: 0px;
-} */
+}
 
 /* .about-content .break-small {
     width: 350px;
@@ -235,7 +235,7 @@
 
 }
 
-/* .vision-content .box::before {
+.vision-content .box::before {
     content: '';
     position: absolute;
     width: 95px;
@@ -245,7 +245,7 @@
     border-right: 0;
     left: 0;
     top: 0px;
-} */
+}
 
 .vision-content .box-mission {
     position: relative;
@@ -259,7 +259,7 @@
     margin-left: 10px;
 }
 
-/* .vision-content .box-mission::before {
+.vision-content .box-mission::before {
     content: '';
     position: absolute;
     width: 95px;
@@ -269,7 +269,7 @@
     border-right: 0;
     left: 0;
     top: 0px;
-} */
+}
 
 .mission-img {
     background-image: url('/assets/images/mission1.png');

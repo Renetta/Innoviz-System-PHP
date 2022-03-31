@@ -12,6 +12,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faMobile } from '@fortawesome/free-solid-svg-icons';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ import { faMobile } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'InnovizSystemsWebsite';
+  title = 'Innoviz Systems';
   faPhone = faPhone;
   faMap = faMapMarker;
   faEnvelope = faEnvelope;
@@ -74,6 +75,35 @@ export class AppComponent implements OnInit {
     this.router.navigate(['/contact']);
   }
 
+  checkRightClicked() {
+    return false;
+  }
+
+  openCompanyProfile() {
+    this.downloadProfile();
+    const pdf = 'assets/InnovizProfile.pdf';
+    setTimeout(() => {
+      let w: any = window.open(pdf);
+      w.addEventListener('load', function () {
+        // w.document.title = 'Innoviz Systems';
+        w.document.write(`<html>
+        <head>
+          <title>Innoviz Systems</title>
+          <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
+        </head>
+        <body>
+          <iframe style="width: 100%; height: 100%; margin: 0; padding: 0; border: none;" src="${pdf}"></iframe>
+        </body>
+      </html>`);
+      });
+    }, 1000);
+  }
+
+  downloadProfile() {
+    const fileName = 'Innoviz Systems.pdf';
+    saveAs('assets/InnovizProfile.pdf', fileName);
+  }
+
   onActive() {
     window.scroll(0, 0);
   }
@@ -103,7 +133,6 @@ export class AppComponent implements OnInit {
 
     // return false;
   }
-  
 }
 function isButton(
   el: any,

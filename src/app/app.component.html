@@ -41,7 +41,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown" data-bs-dismiss="offcanvas">
                 <a class="dropdown-item" routerLink="/our-company" routerLinkActive="active">About Us</a>
-                <a class="dropdown-item" routerLink="/profile" routerLinkActive="active">Company Profile</a>
+                <!-- <a class="dropdown-item" routerLink="/" routerLinkActive="active">Company Profile</a> -->
+                <a class="dropdown-item" (click)="openCompanyProfile()">Company Profile</a>
                 <a class="dropdown-item" routerLink="/home">Our Partners</a>
               </div>
             </li>

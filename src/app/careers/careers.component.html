@@ -25,7 +25,8 @@
         <div class="row justify-content-start">
             <div class="col-md-12">
                 <p class="text-start text-break fs-6 lh-base text-para">
-                    Please submit your CV through
+                    <span *ngIf="jobs && jobs.length < 1">We don't have any vacancy at the moment.</span>
+                     Please submit your CV through
                     <a routerLink="/careers/job/application/new-application/0" class=" fw-bold link-primary">"Job
                         Applications"</a>. We will contact you soon
                     if your resume is matching with any upcoming jobs.

@@ -15,8 +15,13 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.showSpinner = false;
+      this.openFile("InnovizProfile.pdf");
       this.onSave();
     }, 3000);
+  }
+
+  openFile(fileName: string) {
+    window.open("assets/" + fileName);
   }
 
   onSave() {
