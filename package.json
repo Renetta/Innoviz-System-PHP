@@ -1,6 +1,7 @@
 {
   "name": "innoviz-systems-website",
   "version": "0.0.0",
+
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,6 +9,12 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve": "webpack serve"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
   },
   "private": true,
   "dependencies": {

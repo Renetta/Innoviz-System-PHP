@@ -1,5 +1,11 @@
-.navbar-brand {
+/* .navbar-brand {
   margin-left: 20px;
+} */
+
+.navbar-toggler {
+  background: #84a5c3;
+  border-color: #84a5c3;
+  margin-left: -70px;
 }
 
 .nav-item .nav-link {
@@ -78,7 +84,12 @@
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: linear-gradient(to right, #1b78bd, #f1722f);
+  background: linear-gradient(to right, #1b78bd, #f1722f);
+  /* background-color: linear-gradient(to right, #1b78bd, #f1722f); */
+}
+
+.dropdown-toggle.active{
+  background: linear-gradient(to right, #1b78bd, #f1722f);
 }
 
 .dropdown-menu a:hover {

@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   faMobile = faMobile;
   currentRoute!: string;
   showenquirybutton = true;
-  showText = false;
+  showText = true;
   constructor(
     private el: ElementRef,
     private render: Renderer2,
@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
   }
   showSpinner = true;
   ngOnInit() {
+    this.showText = true;
     this.checkURL();
     setTimeout(() => {
       this.showSpinner = false;
@@ -52,6 +53,8 @@ export class AppComponent implements OnInit {
         this.showenquirybutton = true;
         if (e.url == '/home') {
           this.showText = false;
+        } else {
+          this.showText = true;
         }
         if (e.url == '/contact') {
           this.showenquirybutton = false;

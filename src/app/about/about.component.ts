@@ -92,6 +92,7 @@ export class AboutComponent implements OnInit {
     this.partnersTemp = true;
     this.clientsTemp = false;
     this.showAboutTemp = false;
+    this.route.navigate(['/partners']);
   }
 
   viewAboutSection() {

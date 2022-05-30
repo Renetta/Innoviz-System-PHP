@@ -348,6 +348,14 @@
       }
   ],
 
+  "Partners": [{
+    "id": 111,
+    "name": "R&M (Reichle & De-Massari AG)",
+    "img": "./assets/images/R&Mlogo.png",
+    "description": "R&M - creator of innovative, highly scalable learning programs that help organizations implement sustainabl change by promoting open and courageous conversation, improving efficiency and creating a better place to work.",
+    "website": "https://www.rdm.com/"
+  }],
+
   "CompanyContactDetails": {
     "address": "Abdul Rahman Bin Jassim Street, AL Wakrah, Doha, Qatar",
     "address1": "Office no: 03, Building no: 14",

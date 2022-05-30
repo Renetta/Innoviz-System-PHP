@@ -25,6 +25,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { JobAppComponent } from './job-app/job-app.component';
 // import { FileUploader, FileSelectDirective } from 'ng2-file-upload';
 import { FileUploadModule} from 'ng2-file-upload';
+import { PartnersComponent } from './partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FileUploadModule} from 'ng2-file-upload';
     ProfileComponent,
     SpinnerComponent,
     JobAppComponent,
+    PartnersComponent,
   ],
   imports: [
     BrowserModule,

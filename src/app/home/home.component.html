@@ -1,5 +1,4 @@
-<section class="header img-fluid" style=" background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
-      url('./assets/images/ictbanner5.png');">
+<section class="header img-fluid carousel-fade" >
   <div class="text-box">
     <h1><a routerLink="/our-company">INNOVIZ <span style="padding-right: 10px;"></span>SYSTEMS</a></h1>
     <p>
@@ -75,7 +74,7 @@
 
 </section> -->
 <section id="about-content" *ngIf="!showSpinner">
-  <div class="container">
+  <div class="container md-5">
     <div class="row main-row p-2" style=" background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
     url('./assets/images/about-image.png');">
       <div class="col-lg-4 col-md-12 col-sm-12">
@@ -109,18 +108,55 @@
   </div>
 </section>
 
+<section class="contactus" *ngIf="!showSpinner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="contact-img">
+          <img src="./assets/images/workwithus.jpg" alt="about" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="box-mission ">
+          <h3><span class="pt-2"><span class="text-sub-head">
+            <b><span class="fs-2">C</span>ooperating <span class="fs-2">W</span>ith <span class="fs-2">U</span>s</b></span></span></h3>
+        </div>
+        <div class="about-desc mb-2">
+          <p class="text-break lh-base text-para" style="color: #6c757d;
+          word-spacing: 8.4px;">
+            <span style="font-size: xx-large;"><b>W</b></span>e offer you the best services in all kinds of 
+            information and communication technologies such as Security Solution, Networking Solution, parking Solution, 
+            Fibre Optic Solutions , Electric Solutions, Software and Cloud services and System Integrated parking Solutions.
+            We look forward to collebrating with you and make a good experience with "INNOVIZ". 
+            <br><br>
+           
+          </p>
+        </div>
+        <div class="about-read-more mb-2" style="margin-top: 30px;">
+          <button class="btn btn-primary read-more-button" type="button" (click)="goToContactPage()">
+            Contact Us<span style="padding: 5px;"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ----clients--- -->
+
 <section id="client-content" class="partners mb-5" *ngIf="!showSpinner">
-  <div class="conatiner border border-4 rounded-pill main-prow"
-    style="    background-image: url(./assets/images/clients.jpg);">
+  <div class="conatiner border   main-prow" style="    background-image: url(./assets/images/clients.jpg);">
     <div class="box-mission ">
       <h3 class="text-head"><span class="pt-2"><span class="text-sub-head">Our</span> Clients</span></h3>
     </div>
     <div class="container" style="position: sticky;">
       <owl-carousel-o [options]="partnerOptions">
         <ng-template carouselSlide *ngFor="let partner of partners; let i=index;">
-          <div class="md-5">
-            <img [src]="partner.partnerLogo" alt="partner" style="width: 150px; top: 0;">
+          <div class="md-5 client-in">
+            <ul>
+              <li>
+                <img [src]="partner.partnerLogo" alt="partner" class="border" style="background-color: #e9ecefb3;">
+              </li>
+            </ul>
           </div>
         </ng-template>
       </owl-carousel-o>

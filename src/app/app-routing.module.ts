@@ -6,6 +6,7 @@ import { ClientsPageComponent } from './clients-page/clients-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { JobAppComponent } from './job-app/job-app.component';
+import { PartnersComponent } from './partners/partners.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
 import { ServicesComponent } from './services/services.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: "clients", component: ClientsPageComponent},
   { path: "profile", component: ProfileComponent},
   { path: "careers/job/application/:name/:id", component: JobAppComponent},
+  { path: "partners", component: PartnersComponent}
 ];
 
 @NgModule({

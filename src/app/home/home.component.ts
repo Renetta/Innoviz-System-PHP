@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     pullDrag: true,
     dots: true,
     navSpeed: 700,
-    navText: ['', ''],
+    navText: ['ddf', 'ewewe'],
     responsive: {
       0: {
         items: 2,
@@ -45,13 +45,6 @@ export class HomeComponent implements OnInit {
     nav: false,
   };
   showSpinner = true;
-  // images: any = [
-  //   "'background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)) url('./assets/images/parking.png')'",
-  //   "'background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)) url('./assets/images/securitysoln.png')'",
-  //   "'background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)) url('./assets/images/networking.png')'",
-  //   "'background-image: linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)) url('./assets/images/ictbanner5.png')'",
-
-  // ];
   images = new Array(
     './assets/images/networking.png',
     './assets/images/parking.png',
@@ -104,5 +97,8 @@ export class HomeComponent implements OnInit {
     this.route.navigate(['/our-company', { pageSec: 'aboutUsContentID' }], {
       fragment: 'aboutUsContentID',
     });
+  }
+  goToContactPage() {
+    this.route.navigate(['/contact']);
   }
 }

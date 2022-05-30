@@ -4,8 +4,15 @@
     background: linear-gradient(to right, #00093c, #2d0b00);
 }
 .service-container {
-    margin-top: 110px;
+    /* margin-top: 110px; */
     background:  rgb(176 179 185 / 25%);
+}
+
+.heading-row {
+    margin-top: 20px;
+    background: linear-gradient(to right, #00093c, #2589c7);
+    color: #fff;
+
 }
 
 .header {

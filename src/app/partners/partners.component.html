@@ -1,0 +1,53 @@
+<section class="dummy-container mb-5"></section>
+<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
+    <div class="overlay">
+        <div class="spinner-wrapper">
+            <app-spinner message="Data Loading"></app-spinner>
+        </div>
+    </div>
+
+    <div class="loaded-content" [class.blurred]="showSpinner">
+    </div>
+</section>
+<section class="partner mb-5" *ngIf="!showSpinner">
+    <div class="container">
+        <div class="row heading-row justify-content-start">
+            <div class="col-md-8 fs-4">
+                OUR PARTNERS
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners-info mb-5">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col col-md-4 mb-5" *ngFor="let partner of partners; let i = index">
+                <div class="card-wrap">
+                    <div class="content">
+                        <div class="face-front">
+                            <div class="border card text-center card-image" style="width: 18rem;">
+                                <img [src]=partner.img class="card-img-top img-fluid " alt="..."
+                                    style="height: 12rem;" />
+                                <div class="card-body">
+                                    <h5 class="card-title text-color">{{partner.name}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="face-back z-depth-2 overflow-auto">
+                            <div class="border card text-center">
+                                <div class="card-header text-color ">
+                                    <h4 class="font-weight-bold text-color">{{partner.name}}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">{{partner.description}}</p>
+                                    <a [href]=partner.website class="btn btn-primary visit-btn">Visit website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

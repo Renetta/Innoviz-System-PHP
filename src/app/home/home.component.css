@@ -1,14 +1,43 @@
 .header {
     height: 100vh;
     width: 100%;    
+    /* background-image:linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
+    url('/assets/images/ictbanner5.png'); */
+    background-image: url('/assets/images/networking.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    /* transition: opacity 1s ease;
-    opacity: 1; */
     overflow: hidden;
-    /* animation: zoom 3s linear infinite; */
+    opacity: 1;
+    transition: opacity 1s linear;
+    z-index: 2;
+    /* animation: change 25s linear infinite; */
+    animation-name: change;
+    animation-direction: alternate;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes change {
+    0% {
+        background-image: url('/assets/images/ictbanner5.png');
+    }
+    25%{
+        background-image: url('/assets/images/datacenter.jpeg');
+    }
+    50% {
+        background-image: url('/assets/images/networking.png');
+    }
+    75% {
+        background-image: url('/assets/images/parking1.jpg');
+    }
+    100%{
+        background-image: url('/assets/images/electricsoln.jpg');
+    }
 }
 
 @keyframes zoom {
@@ -283,7 +312,7 @@
 /* --- partners--- */
 
 .partners {
-    width: 90%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
@@ -417,6 +446,31 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    background-color: rgb(0 0 0 / 25%);
+}
+
+.client-in {
+    width: 100%;
+    height: auto;
+}
+.client-in ul {
+   padding: 0;
+   margin: 0;
+}
+.client-in ul li {
+    list-style: none;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.client-in ul li img {
+    width: 100%;
+    height: 100%;
 }
 
 .partners .text-head {
@@ -499,6 +553,20 @@
     top: 0px;
 } */
 
+/*************************Contact us *******************/
+.contactus {
+    margin-top: 8%;
+    padding: 45px;
+    background: #0d6efd0a;
+}
+
+.contact-img {
+    height: 350px;
+}
+
+.contact-img > img {
+    height: 100%;
+}
 @media(max-width: 700px) {
     .text-box h1 {
         font-size: 30px;
