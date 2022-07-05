@@ -1,0 +1,45 @@
+<section class="dummy-container mb-5"></section>
+<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
+    <div class="overlay">
+        <div class="spinner-wrapper">
+            <app-spinner message="Data Loading"></app-spinner>
+        </div>
+    </div>
+
+    <div class="loaded-content" [class.blurred]="showSpinner">
+    </div>
+</section>
+<section class="dealer mb-2" *ngIf="!showSpinner">
+    <div class="container">
+        <div class="row heading-row justify-content-start">
+            <div class="col-md-8 fs-4">
+                AUTHORIZED DEALERS
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dealers-info mb-5">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4" *ngFor="let dealer of dealers; let i = index;">
+                <div class="row ml-5 mb-2">
+                    <a target="_blank" [href]=dealer.website class="stretched-link">
+                        <img [src]=dealer.img class="float-left" alt="" style="height: 100px;">
+                    </a>
+                </div>
+                <div class="row mb-2">
+                    <a target="_blank" [href]=dealer.certificate class="stretched-link">
+                        <img [src]=dealer.certificate class="img-thumbnail rounded float-left mx-auto"
+                            style="height: 400px; width: 300px;" alt="..." />
+                    </a>
+                </div>
+                <div class="row mb-2 ml-5">
+                    <a target="_blank" [href]=dealer.website class="stretched-link">
+                        <h3 class="font-weight-bold text-color fs-5 "><b>{{dealer.name}}</b></h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

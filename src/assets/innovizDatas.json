@@ -35,14 +35,49 @@
       "partnerLogo": "./assets/images/partners/trafficTech1.png"
     },
     {
-      "id": 2006,
+      "id": 2007,
       "partnerName": "Novax Integrated System-Dubai",
       "partnerLogo": "./assets/images/partners/novax1.png"
     },
     {
-      "id": 2006,
+      "id": 2008,
       "partnerName": "Integrated Scientific Technologies Qatar",
       "partnerLogo": "./assets/images/partners/isq1.png"
+    },
+    {
+      "id": 2009,
+      "partnerName": "Qatari Diar",
+      "partnerLogo": "./assets/images/partners/qatari1.png"
+    },
+    {
+      "id": 2010,
+      "partnerName": "Mekdam Technology",
+      "partnerLogo": "./assets/images/partners/mekdam1.png"
+    },
+    {
+      "id": 2011,
+      "partnerName": "Mannai Corporation",
+      "partnerLogo": "./assets/images/partners/mannai1.png"
+    },
+    {
+      "id": 2012,
+      "partnerName": "Salam Technologies",
+      "partnerLogo": "./assets/images/partners/salam1.png"
+    },
+    {
+      "id": 2013,
+      "partnerName": "Al Jaber Engineering",
+      "partnerLogo": "./assets/images/partners/jaber1.png"
+    },
+    {
+      "id": 2014,
+      "partnerName": "Bahadir Construction Engineering Contracting and Trading",
+      "partnerLogo": "./assets/images/partners/bahadir1.png"
+    },
+    {
+      "id": 2015,
+      "partnerName": "Affable Infotech Information Technology Consultancy",
+      "partnerLogo": "./assets/images/partners/affable1.png"
     }
   ],
 
@@ -351,9 +386,23 @@
   "Partners": [{
     "id": 111,
     "name": "R&M (Reichle & De-Massari AG)",
-    "img": "./assets/images/R&Mlogo.png",
+    "img": "./assets/images/RMlogo.png",
     "description": "R&M - creator of innovative, highly scalable learning programs that help organizations implement sustainabl change by promoting open and courageous conversation, improving efficiency and creating a better place to work.",
-    "website": "https://www.rdm.com/"
+    "website": "https://www.rdm.com/",
+    "certificate": "./assets/documents/R&M-partner.JPG"
+  }],
+  "Dealers": [{
+    "id": 111,
+    "name": "PELCO",
+    "img": "./assets/images/aligntech.jpg",
+    "website": "https://aligngroup.org/",
+    "certificate": "./assets/documents/aligntech.JPG"
+  }, {
+    "id": 112,
+    "name": "LENEL SYSTEMS",
+    "img": "./assets/images/progress.jpg",
+    "website": "http://www.progress.com.qa/",
+    "certificate": "./assets/documents/progress-lenel.JPG"
   }],
 
   "CompanyContactDetails": {

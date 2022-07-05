@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { CareersComponent } from './careers/careers.component';
 import { ClientsPageComponent } from './clients-page/clients-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { DealersComponent } from './dealers/dealers.component';
 import { HomeComponent } from './home/home.component';
 import { JobAppComponent } from './job-app/job-app.component';
 import { PartnersComponent } from './partners/partners.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: "clients", component: ClientsPageComponent},
   { path: "profile", component: ProfileComponent},
   { path: "careers/job/application/:name/:id", component: JobAppComponent},
-  { path: "partners", component: PartnersComponent}
+  { path: "partners", component: PartnersComponent},
+  { path: "certified-dealers", component: DealersComponent},
 ];
 
 @NgModule({

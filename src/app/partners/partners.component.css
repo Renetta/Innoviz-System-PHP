@@ -1,5 +1,5 @@
 .dummy-container {
-    height: 100px;
+    height: 113px;
     width: 100%;
     background: linear-gradient(to right, #00093c, #2d0b00);
 }
@@ -32,6 +32,7 @@
 
 .face-front > .card {
     min-height: 300px;
+    width: 22rem;
 }
 .face-back > .card {
     min-height: 300px;
@@ -49,7 +50,7 @@
 }
 
 .text-color {
-    color: #dc3545;;
+    color: #f1642a;
 }
 
 .card-body {
@@ -87,3 +88,11 @@
     transform: rotateY(180deg);
     transform-style: preserve-3d;
 }
+
+.stretched-link {
+    text-decoration: none;
+}
+
+/* .partners-link a {
+    text-decoration: none;
+} */

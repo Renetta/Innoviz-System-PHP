@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-partners',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartnersComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private route: Router) { }
   showSpinner = true;
   partners: any = [];
   ngOnInit(): void {
@@ -28,6 +29,12 @@ export class PartnersComponent implements OnInit {
   loadData() {
     this.http.get<any>('./assets/innovizDatas.json').subscribe((res) => {
       this.partners = res.Partners;
+    });
+  }
+
+  goToPartnerInfo(partner: any) {
+    this.route.navigate(['/partners', partner.name, partner.id], {
+      queryParams: partner.name,
     });
   }
 

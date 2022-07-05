@@ -1,9 +1,48 @@
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    background-size: cover;
+}
+
+.carousel-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background: #000; */
+    opacity: 0.7;
+}
+
+.carousel-caption {
+    bottom: 180px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.carousel-caption h5 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+
+.imagethree {
+    height: 100%;
+}
+
+.carousel-caption h5 {
+    text-transform: uppercase;
+}
+
 .header {
     height: 100vh;
-    width: 100%;    
+    width: 100%;
     /* background-image:linear-gradient(rgb(14 10 64 / 63%), rgba(14, 13, 12, 0.7)),
     url('/assets/images/ictbanner5.png'); */
-    background-image: url('/assets/images/networking.png');
+    background-image: url('/assets/images/elv-systems1.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,40 +61,99 @@
     animation-timing-function: ease-in-out;
 }
 
+
+.header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.5;
+}
+
+.header .text-box h1 a span::before{
+    opacity: 1;
+    transition: opacity 1s linear;
+    z-index: 2;
+    content: '';
+    animation: text-change alternate 30s forwards infinite running ease-in-out;
+    text-transform: uppercase;
+}
+
+@keyframes text-change {
+    0% {
+        content: 'ELV System Integrator';
+    }
+    45% {
+        content: 'Data Center Solutions';
+    }
+
+    65% {
+        content: 'security solutions';
+    }
+
+    90% {
+        content: 'Information Security';
+    }
+
+    100% {
+        content: 'PARKING SOLUTIONS';
+    }
+
+    /* 165% {
+        content: 'Electrical Solutions';
+    } */
+}
 @keyframes change {
     0% {
-        background-image: url('/assets/images/ictbanner5.png');
+        background-image: url('/assets/images/elv-systems1.jpg');
     }
-    25%{
+    45% {
         background-image: url('/assets/images/datacenter.jpeg');
     }
-    50% {
-        background-image: url('/assets/images/networking.png');
+
+    65% {
+        background-image: url('/assets/images/securitysoln.png');
     }
-    75% {
+
+    90% {
+        background-image: url('/assets/images/infosecurity.jpg');
+    }
+
+    100% {
         background-image: url('/assets/images/parking1.jpg');
     }
-    100%{
+
+    /* 165% {
         background-image: url('/assets/images/electricsoln.jpg');
-    }
+    } */
 }
 
 @keyframes zoom {
     0% {
         transform: scale(1.2);
     }
+
     15% {
         transform: scale(1.1);
     }
-    
+
     85% {
         transform: scale(1.1);
     }
-    100%{
+
+    100% {
         transform: scale(1.2);
     }
 }
 
+.header h1 a span{
+    font-size: 70px;
+    font-weight: 700;
+}
 
 .header-carousel {
     background-color: #183f69;
@@ -99,14 +197,17 @@
 
 .text-box h1 {
     font-size: 62px;
-    color: #1b74bb;
+    /* color: #1b74bb; */
+    color: #028dd3;
+
     text-shadow: 1px 0 0 beige;
 }
 
 .text-box h1 a {
     text-decoration: none;
     font-weight: bold;
-    color: #1b74bb;
+    /* color: #1b74bb; */
+    color: #028dd3;
     -webkit-text-stroke: 0.1em #fff;
     -webkit-text-stroke-width: 1px;
     letter-spacing: 5px;
@@ -114,7 +215,8 @@
 
 .text-box span {
     font-size: 30px;
-    color: #062193;
+    /* color: #062193; */
+    color: #028dd3;
     font-weight: bold;
 }
 
@@ -144,6 +246,7 @@
     0%, 100% {
         clip-path: polygon(0% 58%, 18% 38%, 43% 45%, 59% 61%, 79% 51%, 94% 40%, 100% 50%, 100% 100%, 1% 100%);
     }
+
     50% {
         clip-path: polygon(0% 58%, 34% 68%, 57% 58%, 75% 54%, 91% 43%, 100% 34%, 100% 100%, 1% 100%);
     }
@@ -158,27 +261,29 @@
     color: #fff;
 }
 
-.visit-btn {    
+.visit-btn {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #f05a2a;
     border-radius: 20px;
     padding: 10px 25px;
     font-size: 20px;
-    background: transparent;
+    /* background: transparent; */
+    background: #f05a2a;
     position: relative;
     cursor: pointer;
     margin-top: 30px;
     transform: translate(0%, -50%);
+    text-transform: uppercase;
     /* background: linear-gradient(to right, #1b78bd, #f1722f); */
 }
 
 .visit-btn:hover {
-    border: 1px solid #f05a2a;
+    border: 1px solid #059bde;
     color: #fff;
     /* font-weight: bold; */
-    background: #f05a2a;
+    background: #059bde;
     transition: 1s;
 }
 
@@ -287,7 +392,7 @@
 }
 
 .link a:hover {
-    background: #062193;
+    background: #3592cd;
 }
 
 .card-container .card-image {
@@ -359,15 +464,17 @@
     background: #acd6e9;
 }
 
-.aboutus-content .img-head img{
+.aboutus-content .img-head img {
     height: 24rem;
     width: 100%;
     position: relative;
 }
+
 .aboutus-content .text-para {
     padding: 40px;
     position: relative;
 }
+
 .read-more-button {
     background: linear-gradient(to right, #1b78bd, #f1722f);
     border: #fff;
@@ -390,6 +497,7 @@
     left: 20px;
     top: -10px;
 }
+
 .aboutus-content .text-box::after {
     content: '';
     position: absolute;
@@ -421,7 +529,7 @@
     border-radius: 0.5rem;
 }
 
-.about-img > img {
+.about-img>img {
     width: 100%;
     height: 100%;
     transform: translateY(-30px);
@@ -430,15 +538,16 @@
     box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3);
 }
 
-.about-title > h2 {
+.about-title>h2 {
     font-style: normal;
     font-weight: 400;
 }
 
-.about-desc > p {
+.about-desc>p {
     font-style: normal;
     line-height: 1.5;
-    color: #dee2e6a1;;
+    color: #dee2e6a1;
+    ;
 }
 
 .main-prow {
@@ -453,10 +562,12 @@
     width: 100%;
     height: auto;
 }
+
 .client-in ul {
-   padding: 0;
-   margin: 0;
+    padding: 0;
+    margin: 0;
 }
+
 .client-in ul li {
     list-style: none;
     display: inline-block;
@@ -564,13 +675,24 @@
     height: 350px;
 }
 
-.contact-img > img {
+.contact-img>img {
     height: 100%;
 }
+
 @media(max-width: 700px) {
     .text-box h1 {
         font-size: 30px;
         margin-bottom: -10px;
+    }
+
+    .text-box h1 a {
+        -webkit-text-stroke: 0.1em #fff;
+        -webkit-text-stroke-width: 0.2px;
+        letter-spacing: 3px;
+    }
+
+    .header h1 a span{
+        font-size: 42px;
     }
 
     .text-box span {

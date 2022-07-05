@@ -81,7 +81,7 @@ export class AboutComponent implements OnInit {
     this.clientsTemp = true;
     this.partnersTemp = false;
     this.showAboutTemp = false;
-    this.route.navigate(['/our-company', { pageSec: 'clientContentID' }]);
+    this.route.navigate(['/our-company']);
   }
 
   goToServicesPage() {

@@ -1,5 +1,5 @@
 .dummy-container {
-    height: 100px;
+    height: 113px;
     width: 100%;
     background: linear-gradient(to right, #00093c, #2d0b00);
 }
@@ -20,4 +20,13 @@
     padding: 1px;
     margin: 10px;
     position: relative;
+}
+
+.link a {
+    color: #fff;
+    background: linear-gradient(to right, #1b78bd, #f1722f);
+}
+
+.link a:hover {
+    background: #3592cd;
 }

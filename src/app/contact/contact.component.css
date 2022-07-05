@@ -86,7 +86,7 @@ i {
 } */
 
 .dummy-container {
-    height: 100px;
+    height: 113px;
     width: 100%;
     background: linear-gradient(to right, #00093c, #2d0b00);
 }
@@ -285,7 +285,7 @@ i {
     font-size: 20px;
     font-weight: bold;
     padding: 7px;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 .has-danger {

@@ -1,0 +1,18 @@
+.dummy-container {
+    height: 113px;
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+}
+
+.heading-row {
+    background: linear-gradient(to right, #00093c, #2589c7);
+    color: #fff;
+}
+
+.stretched-link {
+    text-decoration: none;
+}
+
+.text-color {
+    color: #f1642a;
+}

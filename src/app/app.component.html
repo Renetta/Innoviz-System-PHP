@@ -13,7 +13,8 @@
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/home">
         <!-- removed *ngIf="showText" -->
-        <img [src]="'./assets/images/logo12.png'"   width="300" alt="InnovizLogo"  class="d-inline-block"/>
+        <!-- <img [src]="'./assets/images/logo12.png'"   width="300" alt="InnovizLogo"  class="d-inline-block"/> -->
+        <img [src]="'./assets/images/innoviz1-logo.png'"   width="100" alt="InnovizLogo"  class="d-inline-block"/>
         <!-- <img [src]="'./assets/images/logo.png'" *ngIf="!showText"  width="100" alt="InnovizLogo"  class="d-inline-block"/> -->
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -43,8 +44,10 @@
               <div class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown" data-bs-dismiss="offcanvas">
                 <a class="dropdown-item" routerLink="/our-company" routerLinkActive="active">About Us</a>
                 <!-- <a class="dropdown-item" routerLink="/profile" routerLinkActive="active">Company Profile</a> -->
-                <a class="dropdown-item" (click)="openCompanyProfile()"routerLinkActive="active"  style="cursor: pointer;">Company Profile</a>
+                <a class="dropdown-item" (click)="openCompanyProfile()"routerLinkActive="active"  
+                style="cursor: pointer;">Company Profile</a>
                 <a class="dropdown-item" routerLink="/partners" routerLinkActive="active">Our Partners</a>
+                <a class="dropdown-item" routerLink="/certified-dealers" routerLinkActive="active">Authorizations</a>
               </div>
             </li>
             <li class="nav-item" data-bs-dismiss="offcanvas">

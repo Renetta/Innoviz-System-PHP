@@ -26,6 +26,8 @@ import { JobAppComponent } from './job-app/job-app.component';
 // import { FileUploader, FileSelectDirective } from 'ng2-file-upload';
 import { FileUploadModule} from 'ng2-file-upload';
 import { PartnersComponent } from './partners/partners.component';
+import { DealersComponent } from './dealers/dealers.component';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { PartnersComponent } from './partners/partners.component';
     SpinnerComponent,
     JobAppComponent,
     PartnersComponent,
+    DealersComponent
   ],
   imports: [
     BrowserModule,

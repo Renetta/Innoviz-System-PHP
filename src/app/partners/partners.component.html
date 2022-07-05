@@ -19,7 +19,7 @@
     </div>
 </section>
 
-<section class="partners-info mb-5">
+<!-- <section class="partners-info mb-5">
     <div class="container">
         <div class="row justify-content-start">
             <div class="col col-md-4 mb-5" *ngFor="let partner of partners; let i = index">
@@ -48,6 +48,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="partners-info mb-5">
+    <div class="container">
+        <div class="row justify-content-start">
+            <ul>
+                <li *ngFor="let partner of partners; let i = index;" style="list-style: none;">
+                    <div class="row mb-4 partners-link">
+                        <div class="col-md-2 mb-4">
+                            <a target="_blank" [href]=partner.website class="stretched-link">
+                                <img [src]=partner.img class="float-left" alt="" style="height: 25px;">
+                            </a>
+                        </div>
+                        <div class="col-md-10">
+                            <a target="_blank" [href]=partner.website class="stretched-link">
+                                <h3 class="font-weight-bold text-color"><b>{{partner.name}}</b></h3>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="row mb-5">
+                        <p class="card-text" style="color: #808080;">{{partner.description}}</p>
+                    </div>
+                    <div class="row mb-5">
+                        <a target="_blank" [href]=partner.certificate  >
+                            <img [src]=partner.certificate class="img-thumbnail rounded float-left mx-auto"
+                                style="height: 400px; width: 300px;" alt="..." />
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>

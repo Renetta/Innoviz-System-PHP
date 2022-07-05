@@ -1,78 +1,72 @@
-<section class="dummy-container">
-</section>
-<!-- <div #serviceContentID *ngIf="!showSpinner">
-    <section id="header" class="header">
-        <div class="container">
-            <div class="row">
+<div class="service-container">
+    <section class="dummy-container">
+    </section>
+
+
+    <section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
+        <div class="conatiner">
+            <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <h2>Services</h2>
-                    <p>We provide all kinds of Information and Communications technology solutions</p>
+                    <div class="overlay">
+                        <div class="spinner-wrapper">
+                            <app-spinner message="Data Loading"></app-spinner>
+                        </div>
+                    </div>
+
+                    <div class="loaded-content" [class.blurred]="showSpinner">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-</div> -->
 
-<section class="loadingContent" *ngIf="showSpinner" style="margin-bottom: 400px;">
-    <div class="conatiner">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="overlay">
-                    <div class="spinner-wrapper">
-                        <app-spinner message="Data Loading"></app-spinner>
-                    </div>
-                </div>
-            
-                <div class="loaded-content" [class.blurred]="showSpinner">
+    <section #serviceContentID class="services mb-5 " *ngIf="!showSpinner">
+        <div class="container">
+            <div class="row heading-row justify-content-start">
+                <div class="col-md-12 fs-4">
+                    OUR SERVICES : <span class="fs-6" style="color: darkgrey;"><i>We provide all kinds of Information
+                            and Communications technology solutions</i></span>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<section #serviceContentID class="services mb-5" *ngIf="!showSpinner">
-    <div class="container">
-        <div class="row heading-row justify-content-start">
-            <div class="col-md-12 fs-4">
-                OUR SERVICES - <span class="fs-5"><i>We provide all kinds of Information and Communications technology solutions</i></span>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
-<section id="services" class="service-container serviceDetails" *ngIf="!showSpinner">
-    <div class="container" style="padding-bottom: 20px;">
-        <div class="row justify-content-around align-items-center">
-            <div class="accordion" attr.id="accordionExample" *ngFor="let service of services; let i = index;">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
-                            [attr.data-bs-target]="'#collapseOne_' + i" [attr.aria-bs-controls]="'collapseOne_' + i">
-                            {{service.name}}
-                        </button>
-                    </h2>
-                    <div [attr.id]="'collapseOne_' + i" class="accordion-collapse collapse"
-                        [class.show]='i == 0 ? true : false' aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body" style="background: linear-gradient(to right, #1b78bd, #f1722f);">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <img src="{{service.img}}" alt={{service.name}}>
+    <section id="services" class=" serviceDetails" *ngIf="!showSpinner">
+        <div class="container" style="padding-bottom: 20px;">
+            <div class="row justify-content-around align-items-center">
+                <div class="accordion" attr.id="accordionExample" *ngFor="let service of services; let i = index;">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" [attr.data-bs-toggle]="'collapse'"
+                                [attr.data-bs-target]="'#collapseOne_' + i"
+                                [attr.aria-bs-controls]="'collapseOne_' + i">
+                                {{service.name}}
+                            </button>
+                        </h2>
+                        <div [attr.id]="'collapseOne_' + i" class="accordion-collapse collapse"
+                            [class.show]='i == 0 ? true : false' aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body"
+                                style="background: linear-gradient(to right, #1b78bd, #f1722f);">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <img src="{{service.img}}" alt={{service.name}}>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul>
+                                            <li *ngFor="let details of service.details" style="color: #fff;">
+                                                {{details}}
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <ul>
-                                        <li *ngFor="let details of service.details" style="color: #fff;">
-                                            {{details}}
-                                        </li>
-                                    </ul>
-                                </div>
+
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
